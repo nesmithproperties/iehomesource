@@ -33,62 +33,69 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      {/* Hero Section — full-bleed background image with overlay */}
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center pt-20">
+        {/* Background image — faded */}
+        <img
+          src={heroImg}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ opacity: 0.18 }}
+        />
+        {/* Gradient overlay — left heavier, right lighter so form card pops */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60 pointer-events-none" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
-          {/* Left: Text + CTA */}
-          <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <MapPin className="h-4 w-4" /> Trusted in the Inland Empire
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-foreground mb-4">
-              Sell Your House Fast in Inland Empire for Cash
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
-            </p>
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-            {/* Bullet points */}
-            <ul className="space-y-3 mb-10">
-              {[
-                "Close in as little as 7 days",
-                "We buy houses in any condition",
-                "No commissions or hidden costs",
-              ].map((point) => (
-                <li key={point} className="flex items-center gap-3 text-base font-medium text-foreground">
-                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
-                  {point}
-                </li>
-              ))}
-            </ul>
+            {/* Left: Text + CTA */}
+            <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6 border border-primary/20">
+                <MapPin className="h-4 w-4" /> Trusted in the Inland Empire
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-foreground mb-5">
+                Sell Your House Fast in Inland Empire for Cash
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
+                Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
+              </p>
 
-            {/* Desktop CTA */}
-            <a
-              href="#hero-form"
-              data-testid="button-hero-cta"
-              className="hidden md:inline-flex justify-center items-center h-14 px-8 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+              {/* Bullet points */}
+              <ul className="space-y-3 mb-10">
+                {[
+                  "Close in as little as 7 days",
+                  "We buy houses in any condition",
+                  "No commissions or hidden costs",
+                ].map((point) => (
+                  <li key={point} className="flex items-center gap-3 text-base font-semibold text-foreground">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Desktop CTA */}
+              <a
+                href="#hero-form"
+                data-testid="button-hero-cta"
+                className="hidden md:inline-flex justify-center items-center h-14 px-8 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
+              >
+                Get My Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </motion.div>
+
+            {/* Right: Form card */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
+              id="hero-form"
             >
-              Get My Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </motion.div>
-
-          {/* Right: Image + Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col gap-6"
-            id="hero-form"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl transform translate-x-3 translate-y-3 -z-10"></div>
-              <img
-                src={heroImg}
-                alt="Clean suburban house in Inland Empire, California"
-                className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
-              />
-            </div>
-            <LeadForm />
-          </motion.div>
+              <LeadForm />
+            </motion.div>
+          </div>
         </div>
       </section>
 
