@@ -157,11 +157,6 @@ export default function Home() {
 
       {/* Benefits vs Traditional */}
       <section id="benefits" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">A better way to sell</h2>
-          <p className="text-lg text-muted-foreground">See how selling to IE Cash Offers compares to the traditional real estate route.</p>
-        </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Traditional */}
           <div className="border border-border rounded-3xl p-8 md:p-12 bg-card/50">
