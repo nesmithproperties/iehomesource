@@ -70,7 +70,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-white/75 mb-8 max-w-lg">
                 Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
               </p>
-              <ul className="space-y-3 mb-10">
+              <ul className="space-y-3">
                 {["Close in as little as 7 days", "We buy houses in any condition", "No commissions or hidden costs"].map((point) => (
                   <li key={point} className="flex items-center gap-3 text-base font-semibold text-white">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
@@ -78,10 +78,6 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <a href="#hero-form" data-testid="button-hero-cta"
-                className="hidden md:inline-flex justify-center items-center h-14 px-8 rounded-md bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30">
-                Get My Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} id="hero-form">
