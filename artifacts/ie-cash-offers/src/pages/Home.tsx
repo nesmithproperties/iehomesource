@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, DollarSign, Home as HomeIcon, MapPin, PhoneCa
 import LeadForm from "@/components/LeadForm";
 
 // Images
-import heroImg from "@/assets/images/hero.png";
+import heroImg from "@/assets/images/hero-house.png";
 import distressedImg from "@/assets/images/distressed.png";
 import handshakeImg from "@/assets/images/handshake.png";
 import neighborhoodImg from "@/assets/images/neighborhood.png";
@@ -35,35 +35,73 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            initial="hidden" animate="visible" variants={fadeIn}
-            className="max-w-2xl"
-          >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+          {/* Left: Text + CTA */}
+          <motion.div initial="hidden" animate="visible" variants={fadeIn}>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               <MapPin className="h-4 w-4" /> Trusted in the Inland Empire
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight text-foreground mb-6">
-              Sell your house fast. <span className="text-primary">No agents, no repairs.</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-foreground mb-4">
+              Sell Your House Fast in Inland Empire for Cash
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              We buy houses as-is for cash in Riverside, San Bernardino, and surrounding areas. Get a fair offer in 24 hours and close in as little as 7 days.
+              Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" data-testid="button-hero-cta" className="inline-flex justify-center items-center h-14 px-8 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
-                Get Your Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </div>
+
+            {/* Bullet points */}
+            <ul className="space-y-3 mb-10">
+              {[
+                "Close in as little as 7 days",
+                "We buy houses in any condition",
+                "No commissions or hidden costs",
+              ].map((point) => (
+                <li key={point} className="flex items-center gap-3 text-base font-medium text-foreground">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                  {point}
+                </li>
+              ))}
+            </ul>
+
+            {/* Desktop CTA */}
+            <a
+              href="#hero-form"
+              data-testid="button-hero-cta"
+              className="hidden md:inline-flex justify-center items-center h-14 px-8 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+            >
+              Get My Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
-            className="relative"
+
+          {/* Right: Image + Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col gap-6"
+            id="hero-form"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform translate-x-4 translate-y-4 -z-10"></div>
-            <img src={heroImg} alt="Beautiful Southern California Home" className="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3] md:aspect-square lg:aspect-[4/3]" />
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl transform translate-x-3 translate-y-3 -z-10"></div>
+              <img
+                src={heroImg}
+                alt="Clean suburban house in Inland Empire, California"
+                className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
+              />
+            </div>
+            <LeadForm />
           </motion.div>
         </div>
       </section>
+
+      {/* Mobile sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden p-4 bg-background/95 backdrop-blur border-t border-border">
+        <a
+          href="#hero-form"
+          data-testid="button-mobile-sticky-cta"
+          className="flex justify-center items-center h-13 w-full rounded-md bg-primary text-primary-foreground font-semibold text-base hover:bg-primary/90 transition-colors shadow-lg"
+        >
+          Get My Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
+        </a>
+      </div>
 
       {/* Trusted Logos / Social Proof */}
       <section className="border-y border-border bg-muted/30 py-10">
