@@ -56,33 +56,56 @@ export default function Home() {
         <div className="absolute inset-0 bg-[hsl(220,50%,10%)]/70 pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
-        {/* Content — centered */}
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-44 text-center">
-          <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-white text-sm font-semibold mb-6 border border-white/25 backdrop-blur-sm">
-              <MapPin className="h-4 w-4" /> Trusted in the Inland Empire
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-white mb-5">
-              Sell Your House Fast in Inland Empire for Cash
-            </h1>
-            <p className="text-lg md:text-xl text-white/75 mb-10 max-w-2xl mx-auto">
-              Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
-            </p>
-            <ul className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-10 gap-y-3 mb-10">
-              {["Close in as little as 7 days", "We buy houses in any condition", "No commissions or hidden costs"].map((point) => (
-                <li key={point} className="flex items-center gap-2 text-base font-semibold text-white">
-                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
-                  {point}
-                </li>
-              ))}
-            </ul>
-            <a
-              href="tel:6268930240"
-              className="inline-flex justify-center items-center h-14 px-10 rounded-md bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
+        {/* Content — two columns */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left: headline + bullets */}
+            <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-white text-sm font-semibold mb-6 border border-white/25 backdrop-blur-sm">
+                <MapPin className="h-4 w-4" /> Trusted in the Inland Empire
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-white mb-5">
+                Sell Your House Fast in Inland Empire for Cash
+              </h1>
+              <p className="text-lg md:text-xl text-white/75 mb-8 max-w-lg">
+                Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
+              </p>
+              <ul className="space-y-3">
+                {["Close in as little as 7 days", "We buy houses in any condition", "No commissions or hidden costs"].map((point) => (
+                  <li key={point} className="flex items-center gap-3 text-base font-semibold text-white">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Right: GoHighLevel inline form */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
+              className="w-full"
+              style={{ minHeight: 670 }}
             >
-              <PhoneCall className="mr-2 h-5 w-5" /> Call (626) 893-0240
-            </a>
-          </motion.div>
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/e1P4JJeMVFN4MUZ1NS7o"
+                style={{ display: 'none', width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                id="inline-e1P4JJeMVFN4MUZ1NS7o"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="leadCollected"
+                data-deactivation-value=""
+                data-form-name="Form Webpage"
+                data-height="670"
+                data-layout-iframe-id="inline-e1P4JJeMVFN4MUZ1NS7o"
+                data-form-id="e1P4JJeMVFN4MUZ1NS7o"
+                title="Form Webpage"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
