@@ -155,52 +155,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefits vs Traditional */}
-      <section id="benefits" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Traditional */}
-          <div className="border border-border rounded-3xl p-8 md:p-12 bg-card/50">
-            <h3 className="text-2xl font-bold mb-6 text-muted-foreground">Traditional Agent</h3>
-            <ul className="space-y-6">
-              {[
-                { label: "Commissions & Fees", value: "6% of sale price + hidden fees" },
-                { label: "Repairs Needed", value: "Thousands out of pocket" },
-                { label: "Closing Timeline", value: "30-90+ days" },
-                { label: "Showings", value: "Multiple open houses, strangers in your home" },
-                { label: "Certainty", value: "Buyer financing can fall through" }
-              ].map((item, i) => (
-                <li key={i} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                  <div className="text-sm text-muted-foreground mb-1">{item.label}</div>
-                  <div className="font-medium">{item.value}</div>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Us */}
-          <div className="border-2 border-primary rounded-3xl p-8 md:p-12 bg-primary/5 relative shadow-xl shadow-primary/5">
-            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-              The IE Cash Way
-            </div>
-            <h3 className="text-2xl font-bold mb-6 text-foreground">IE Cash Offers</h3>
-            <ul className="space-y-6">
-              {[
-                { label: "Commissions & Fees", value: "NONE. We pay all closing costs." },
-                { label: "Repairs Needed", value: "NONE. We buy entirely as-is." },
-                { label: "Closing Timeline", value: "As little as 7 days, or on your schedule." },
-                { label: "Showings", value: "Just one quick walk-through." },
-                { label: "Certainty", value: "We pay cash. No banks, no appraisals, no falling through." }
-              ].map((item, i) => (
-                <li key={i} className="border-b border-primary/20 pb-4 last:border-0 last:pb-0">
-                  <div className="text-sm text-primary mb-1">{item.label}</div>
-                  <div className="font-bold text-lg">{item.value}</div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Trust Section */}
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
