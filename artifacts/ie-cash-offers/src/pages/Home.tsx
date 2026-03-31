@@ -35,17 +35,16 @@ export default function Home() {
 
       {/* Hero Section — full-bleed background image with overlay */}
       <section className="relative overflow-hidden min-h-[90vh] flex items-center pt-20">
-        {/* Background image — faded */}
+        {/* Background image — full photo */}
         <img
           src={heroImg}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ opacity: 0.18 }}
         />
-        {/* Gradient overlay — left heavier, right lighter so form card pops */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60 pointer-events-none" />
-        {/* Bottom fade */}
+        {/* Dark overlay so text stays readable */}
+        <div className="absolute inset-0 bg-[hsl(220,50%,10%)]/70 pointer-events-none" />
+        {/* Bottom fade into page background */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
         {/* Content */}
@@ -54,13 +53,13 @@ export default function Home() {
 
             {/* Left: Text + CTA */}
             <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6 border border-primary/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-white text-sm font-semibold mb-6 border border-white/25 backdrop-blur-sm">
                 <MapPin className="h-4 w-4" /> Trusted in the Inland Empire
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-foreground mb-5">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-white mb-5">
                 Sell Your House Fast in Inland Empire for Cash
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
+              <p className="text-lg md:text-xl text-white/75 mb-8 max-w-lg">
                 Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
               </p>
 
@@ -71,7 +70,7 @@ export default function Home() {
                   "We buy houses in any condition",
                   "No commissions or hidden costs",
                 ].map((point) => (
-                  <li key={point} className="flex items-center gap-3 text-base font-semibold text-foreground">
+                  <li key={point} className="flex items-center gap-3 text-base font-semibold text-white">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
                     {point}
                   </li>
@@ -82,7 +81,7 @@ export default function Home() {
               <a
                 href="#hero-form"
                 data-testid="button-hero-cta"
-                className="hidden md:inline-flex justify-center items-center h-14 px-8 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
+                className="hidden md:inline-flex justify-center items-center h-14 px-8 rounded-md bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
               >
                 Get My Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
               </a>
