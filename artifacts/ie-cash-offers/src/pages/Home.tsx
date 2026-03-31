@@ -38,14 +38,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <HomeIcon className="h-8 w-8 text-primary" />
-            <span className="font-serif font-bold text-2xl tracking-tight text-foreground">IE Cash Offers</span>
+            <span className="font-serif font-bold text-2xl tracking-tight text-foreground">Sell Fast Inland Empire</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#why-us" data-testid="link-why-us" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Why Us</a>
             <a href="#how-it-works" data-testid="link-how-it-works" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">How It Works</a>
             <a href="#testimonials" data-testid="link-testimonials" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Testimonials</a>
             <a href="#final-cta" data-testid="link-nav-contact" className="flex items-center gap-2 text-sm font-bold text-primary">
-              <PhoneCall className="h-4 w-4" /> (951) 555-0199
+              <PhoneCall className="h-4 w-4" /> (626) 893-0240
             </a>
           </div>
         </div>
@@ -297,7 +297,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <HomeIcon className="h-6 w-6 text-primary" />
-                <span className="font-serif font-bold text-xl tracking-tight">IE Cash Offers</span>
+                <span className="font-serif font-bold text-xl tracking-tight">Sell Fast Inland Empire</span>
               </div>
               <p className="text-background/60 leading-relaxed max-w-xs">
                 The most trusted cash home buyers in the Inland Empire. We buy houses fast, for cash, in any condition.
@@ -306,8 +306,8 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-6">Contact Us</h4>
               <ul className="space-y-4 text-background/60">
-                <li className="flex items-center gap-3"><PhoneCall className="h-5 w-5 text-primary" /> (951) 555-0199</li>
-                <li className="flex items-center gap-3"><MapPin className="h-5 w-5 text-primary" /> Riverside, CA 92501</li>
+                <li className="flex items-center gap-3"><PhoneCall className="h-5 w-5 text-primary" /> (626) 893-0240</li>
+                <li className="flex items-center gap-3"><MapPin className="h-5 w-5 text-primary" /> Inland Empire, CA</li>
               </ul>
             </div>
             <div>
@@ -325,7 +325,7 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-8 border-t border-background/10 text-center text-sm text-background/40">
-            &copy; {new Date().getFullYear()} IE Cash Offers. All rights reserved.
+            &copy; {new Date().getFullYear()} Sell Fast Inland Empire. All rights reserved.
           </div>
         </div>
       </footer>

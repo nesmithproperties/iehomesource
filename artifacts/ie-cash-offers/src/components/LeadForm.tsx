@@ -77,7 +77,7 @@ export default function LeadForm() {
                 <FormControl>
                   <div className="relative">
                     <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input placeholder="(951) 555-0123" className="pl-9" {...field} data-testid="input-phone" />
+                    <Input placeholder="(626) 893-0240" className="pl-9" {...field} data-testid="input-phone" />
                   </div>
                 </FormControl>
                 <FormMessage />
