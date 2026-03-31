@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "UFfkK_lvDURnPslHn6V1O"
+uri = "file://artifacts/ie-cash-offers/src/assets/images/hero.png"
+type = "image"
+title = "suburban home in Riverside"
+
+[[generated]]
+id = "e5B20n6Xa63UyWLehJr96"
+uri = "file://artifacts/ie-cash-offers/src/assets/images/distressed.png"
+type = "image"
+title = "distressed house needing repairs"
+
+[[generated]]
+id = "pWv3OZCTZGoOlNwtEyN5Q"
+uri = "file://artifacts/ie-cash-offers/src/assets/images/handshake.png"
+type = "image"
+title = "handshake over dining table"
+
+[[generated]]
+id = "HDD8TLQtLz0q_DHFlhL7g"
+uri = "file://artifacts/ie-cash-offers/src/assets/images/neighborhood.png"
+type = "image"
+title = "suburban street in Inland Empire"
