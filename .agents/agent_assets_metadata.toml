@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "UFfkK_lvDURnPslHn6V1O"
@@ -24,3 +23,9 @@ id = "HDD8TLQtLz0q_DHFlhL7g"
 uri = "file://artifacts/ie-cash-offers/src/assets/images/neighborhood.png"
 type = "image"
 title = "suburban street in Inland Empire"
+
+[[outputs]]
+id = "tbLG_nwMnCwwkMvuXKu6Y"
+uri = "file://ie-cash-offers-bluehost.tar.gz"
+type = "unspecified"
+title = "IE Cash Offers — Bluehost Files"
