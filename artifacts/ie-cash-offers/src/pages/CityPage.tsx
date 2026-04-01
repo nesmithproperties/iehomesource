@@ -14,6 +14,7 @@ import {
 import { useEffect } from "react";
 import { Link } from "wouter";
 import heroImg from "@/assets/images/hero-house.png";
+import { cities } from "@/data/cityData";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -353,28 +354,15 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
               <p className="text-slate-300 text-sm leading-relaxed font-medium">We provide a fast, fair, and honest way to sell your home in the Inland Empire. We believe in providing solutions that help homeowners move forward with their lives without the stress of traditional real estate transactions.</p>
             </div>
             <div>
-              <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Service Areas</h5>
+              <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Cities We Serve</h5>
               <div className="flex flex-wrap gap-x-3 gap-y-2">
-                {[
-                  { label: "Riverside", slug: "riverside" },
-                  { label: "San Bernardino", slug: "san-bernardino" },
-                  { label: "Fontana", slug: "fontana" },
-                  { label: "Moreno Valley", slug: "moreno-valley" },
-                  { label: "Rancho Cucamonga", slug: "rancho-cucamonga" },
-                  { label: "Ontario", slug: "ontario" },
-                  { label: "Corona", slug: "corona" },
-                  { label: "Victorville", slug: "victorville" },
-                  { label: "Murrieta", slug: "murrieta" },
-                  { label: "Temecula", slug: "temecula" },
-                  { label: "Rialto", slug: "rialto" },
-                  { label: "Hesperia", slug: "hesperia" },
-                ].map(({ label, slug }) => (
+                {cities.map(({ name, slug }) => (
                   <Link
                     key={slug}
-                    href={`/${slug}`}
+                    href={`/sell-my-house-fast-${slug}`}
                     className="text-slate-300 hover:text-primary text-sm font-medium transition-colors"
                   >
-                    {label}
+                    {name}
                   </Link>
                 ))}
               </div>

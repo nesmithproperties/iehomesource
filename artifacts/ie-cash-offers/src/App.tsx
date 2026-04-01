@@ -4,32 +4,18 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import CityPage from "@/pages/CityPage";
+import SellMyHouseFast from "@/pages/SellMyHouseFast";
+import { cities } from "@/data/cityData";
 
 const queryClient = new QueryClient();
-
-const citySlugs = [
-  "riverside",
-  "san-bernardino",
-  "fontana",
-  "moreno-valley",
-  "rancho-cucamonga",
-  "ontario",
-  "corona",
-  "victorville",
-  "murrieta",
-  "temecula",
-  "rialto",
-  "hesperia",
-];
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      {citySlugs.map((slug) => (
-        <Route key={slug} path={`/${slug}`}>
-          {() => <CityPage citySlug={slug} />}
+      {cities.map((city) => (
+        <Route key={city.slug} path={`/sell-my-house-fast-${city.slug}`}>
+          {() => <SellMyHouseFast citySlug={city.slug} />}
         </Route>
       ))}
       <Route component={NotFound} />
