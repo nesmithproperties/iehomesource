@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
 import {
   AlertCircle,
-  ArrowRight,
-  Award,
-  Ban,
   Building2,
-  CalendarDays,
   CheckCircle2,
-  ClipboardList,
   DollarSign,
   Home as HomeIcon,
   Key,
@@ -17,7 +12,15 @@ import {
   Star,
   Users,
   Wrench,
+  HelpCircle,
+  ShieldCheck,
+  Award,
+  Clock,
+  Scale,
+  BadgeCheck,
+  Users2 
 } from "lucide-react";
+import { useEffect } from "react";
 
 import heroImg from "@/assets/images/hero-house.png";
 import handshakeImg from "@/assets/images/handshake.png";
@@ -29,326 +32,280 @@ const fadeIn = {
 };
 
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white font-sans text-slate-900">
 
       {/* ── Navigation ── */}
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <HomeIcon className="h-8 w-8 text-primary" />
-            <span className="font-serif font-bold text-2xl tracking-tight text-foreground">Sell Fast Inland Empire</span>
+            <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">Sell Fast Inland Empire</span>
           </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#why-us" data-testid="link-why-us" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Why Us</a>
-            <a href="#how-it-works" data-testid="link-how-it-works" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">How It Works</a>
-            <a href="#testimonials" data-testid="link-testimonials" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Testimonials</a>
-            <a href="#final-cta" data-testid="link-nav-contact" className="flex items-center gap-2 text-sm font-bold text-primary">
+          <div className="hidden md:flex items-center gap-8 text-sm font-bold">
+            <a href="#why-us" className="text-slate-600 hover:text-primary transition-colors uppercase tracking-widest">Why Choose Us</a>
+            <a href="#how-it-works" className="text-slate-600 hover:text-primary transition-colors uppercase tracking-widest">Our Process</a>
+            <a href="#faqs" className="text-slate-600 hover:text-primary transition-colors uppercase tracking-widest">Questions</a>
+            <a href="tel:6268930240" className="flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-black hover:shadow-xl transition-all">
               <PhoneCall className="h-4 w-4" /> (626) 893-0240
             </a>
           </div>
         </div>
       </nav>
 
-      {/* ── Hero — full-bleed background image ── */}
-      <section className="relative overflow-hidden min-h-[90vh] flex items-center pt-20">
-        <img src={heroImg} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-[hsl(220,50%,10%)]/70 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      {/* ── HERO SECTION ── */}
+      <section className="relative min-h-screen lg:min-h-[95vh] flex items-center pt-24 pb-16 overflow-hidden">
+        <img src={heroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-slate-950/85" />
 
-        {/* Content — two columns */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-            {/* Left: headline + bullets */}
-            <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-white text-sm font-semibold mb-6 border border-white/25 backdrop-blur-sm">
-                <MapPin className="h-4 w-4" /> Trusted in the Inland Empire
+            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="lg:col-span-6 text-white text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-lg">
+                <BadgeCheck className="h-3 w-3" /> Professional Real Estate Solutions
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-white mb-5">
-                Sell Your House Fast in Inland Empire for Cash
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black leading-[1.05] mb-6 tracking-tight drop-shadow-2xl">
+                Sell Your House <span className="text-primary italic">Fast</span> For A Fair Cash Price.
               </h1>
-              <p className="text-lg md:text-xl text-white/75 mb-8 max-w-lg">
-                Get a fair cash offer within 24 hours. No repairs. No agents. No fees.
+              <p className="text-lg md:text-xl text-white/90 mb-4 max-w-2xl leading-relaxed font-bold">
+                We buy houses in the Inland Empire regardless of condition, location, or price point. If you need to sell quickly for any reason, we are here to help.
               </p>
-              <ul className="space-y-3">
-                {["Close in as little as 7 days", "We buy houses in any condition", "No commissions or hidden costs"].map((point) => (
-                  <li key={point} className="flex items-center gap-3 text-base font-semibold text-white">
+              <p className="text-sm md:text-base text-slate-300 mb-10 max-w-xl leading-relaxed font-medium">
+                Skip the months of waiting, the intrusive open houses, and the expensive repair lists. We offer a direct sale process where we buy your property as-is, meaning you don't spend a dime on fix-ups or agent commissions.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
+                {[
+                  "No Agent Commissions or Fees",
+                  "Close On Your Preferred Date",
+                  "We Buy In 100% As-Is Condition",
+                  "We Pay ALL Closing Costs",
+                  "No Cleaning or Repairs Needed",
+                  "Simple, Stress-Free Process"
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Right: GoHighLevel inline form */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full"
-              style={{ minHeight: 670 }}
-            >
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/e1P4JJeMVFN4MUZ1NS7o"
-                style={{ display: 'none', width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
-                id="inline-e1P4JJeMVFN4MUZ1NS7o"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="leadCollected"
-                data-deactivation-value=""
-                data-form-name="Form Webpage"
-                data-height="670"
-                data-layout-iframe-id="inline-e1P4JJeMVFN4MUZ1NS7o"
-                data-form-id="e1P4JJeMVFN4MUZ1NS7o"
-                title="Form Webpage"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mobile sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden p-4 bg-background/95 backdrop-blur border-t border-border">
-        <a href="tel:6268930240" data-testid="button-mobile-sticky-cta"
-          className="flex justify-center items-center h-12 w-full rounded-md bg-primary text-white font-semibold text-base hover:bg-primary/90 transition-colors shadow-lg">
-          <PhoneCall className="mr-2 h-5 w-5" /> Call (626) 893-0240
-        </a>
-      </div>
-
-      {/* ── Trust Bar ── */}
-      <section className="border-y border-border bg-card py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { icon: MapPin,       label: "Local Inland Empire Buyers" },
-              { icon: Ban,          label: "No Fees or Commissions" },
-              { icon: CalendarDays, label: "Close On Your Timeline" },
-              { icon: Award,        label: "Hundreds of Homes Purchased" },
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center gap-3" data-testid={`trust-item-${label.replace(/\s+/g, "-").toLowerCase()}`}>
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon className="h-6 w-6 text-primary" />
-                </div>
-                <p className="text-sm font-semibold text-foreground">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why Us ── */}
-      <section id="why-us" className="py-20 md:py-32 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <img src={handshakeImg} alt="Local IE Cash Offers team meeting with homeowner" className="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3]" />
-            </motion.div>
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
-                Why Inland Empire Homeowners Choose Us
-              </h2>
-              <p className="text-lg text-muted-foreground mb-5 leading-relaxed">
-                We are local cash buyers who understand the Inland Empire market. When you contact us, you are speaking directly with real buyers, not a call center.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We evaluate your property honestly and give you a fair cash offer based on real data. There is no pressure and no obligation. Our goal is to make the process simple and stress-free from start to finish.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-card border border-border rounded-xl p-5">
-                  <div className="text-3xl font-bold text-primary mb-1">500+</div>
-                  <div className="text-sm text-muted-foreground">Homes Bought Locally</div>
-                </div>
-                <div className="bg-card border border-border rounded-xl p-5">
-                  <div className="text-3xl font-bold text-primary mb-1">A+</div>
-                  <div className="text-sm text-muted-foreground">BBB Rating</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── How It Works ── */}
-      <section id="how-it-works" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}
-          className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">How It Works</h2>
-          <p className="text-lg text-muted-foreground">Three simple steps to a stress-free sale.</p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: ClipboardList,
-              step: "Step 1",
-              title: "Submit Your Property",
-              desc: "Fill out the form or call us. It takes less than a minute.",
-            },
-            {
-              icon: DollarSign,
-              step: "Step 2",
-              title: "Receive Your Cash Offer",
-              desc: "We review your property and send you a no-obligation offer within 24 hours.",
-            },
-            {
-              icon: Key,
-              step: "Step 3",
-              title: "Close On Your Timeline",
-              desc: "Choose your closing date. We handle all paperwork and pay all closing costs.",
-            },
-          ].map(({ icon: Icon, step, title, desc }, i) => (
-            <motion.div key={i}
-              initial="hidden" whileInView="visible" viewport={{ once: true }}
-              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: i * 0.15 } } }}
-              className="bg-card border border-border rounded-2xl p-8 relative overflow-hidden"
-              data-testid={`step-card-${i + 1}`}
-            >
-              <div className="absolute top-4 right-6 text-6xl font-bold text-primary/5 select-none">{i + 1}</div>
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
-                <Icon className="h-7 w-7 text-primary" />
-              </div>
-              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">{step}</p>
-              <h3 className="text-xl font-bold mb-3">{title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── Situations Section ── */}
-      <section className="py-20 md:py-32 bg-secondary text-secondary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <img src={neighborhoodImg} alt="" aria-hidden="true" className="w-full h-full object-cover" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}
-            className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4 text-white">
-              We Buy Houses In Any Situation
-            </h2>
-            <p className="text-lg text-white/70">No matter your situation, we provide a simple and reliable solution.</p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              { icon: AlertCircle, label: "Facing Foreclosure" },
-              { icon: Building2,   label: "Inherited Property" },
-              { icon: Users,       label: "Problem Tenants" },
-              { icon: DollarSign,  label: "Divorce" },
-              { icon: Plane,       label: "Relocating" },
-              { icon: Wrench,      label: "Major Repairs Needed" },
-            ].map(({ icon: Icon, label }, i) => (
-              <motion.div key={label}
-                initial="hidden" whileInView="visible" viewport={{ once: true }}
-                variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1, transition: { delay: i * 0.08 } } }}
-                className="bg-white/10 border border-white/15 rounded-2xl p-6 flex flex-col items-center text-center gap-4 backdrop-blur-sm"
-                data-testid={`situation-${label.replace(/\s+/g, "-").toLowerCase()}`}
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Icon className="h-6 w-6 text-primary" />
-                </div>
-                <p className="font-semibold text-white">{label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Testimonials ── */}
-      <section id="testimonials" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}
-          className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">What Homeowners Say</h2>
-          <p className="text-lg text-muted-foreground">Real experiences from real Inland Empire homeowners.</p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { quote: "They gave me a fair offer and closed quickly. I did not have to fix anything.", author: "Maria G.", location: "Riverside" },
-            { quote: "The process was simple and stress-free. I would definitely recommend them.", author: "James R.", location: "San Bernardino" },
-            { quote: "I needed to sell fast and they delivered exactly what they promised.", author: "Angela T.", location: "Ontario" },
-          ].map(({ quote, author, location }, i) => (
-            <motion.div key={i}
-              initial="hidden" whileInView="visible" viewport={{ once: true }}
-              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: i * 0.15 } } }}
-              className="bg-card border border-border rounded-2xl p-8 flex flex-col"
-              data-testid={`testimonial-card-${i + 1}`}
-            >
-              <div className="flex gap-1 mb-5">
-                {Array.from({ length: 5 }).map((_, si) => (
-                  <Star key={si} className="h-5 w-5 fill-primary text-primary" />
+                    <span className="text-xs font-black uppercase tracking-tight text-white/90">{item}</span>
+                  </div>
                 ))}
               </div>
-              <p className="text-foreground leading-relaxed flex-1 text-base mb-6">"{quote}"</p>
+            </motion.div>
+
+            {/* ── FORM BLOCK ── */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="lg:col-span-6 w-full flex justify-center lg:justify-end">
+              <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-t-8 border-primary w-full max-w-[520px]">
+                <div className="w-full h-[480px] p-4 bg-white flex items-center justify-center">
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/e1P4JJeMVFN4MUZ1NS7o"
+                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                    id="inline-e1P4JJeMVFN4MUZ1NS7o"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Form Webpage"
+                    data-height="344"
+                    data-layout-iframe-id="inline-e1P4JJeMVFN4MUZ1NS7o"
+                    data-form-id="e1P4JJeMVFN4MUZ1NS7o"
+                    title="Form Webpage"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION: WHY TRUST US ── */}
+      <section id="why-us" className="py-24 bg-white border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-slate-50 rounded-[2.5rem] p-10 md:p-16 border border-slate-200 shadow-sm relative overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
               <div>
-                <p className="font-bold text-foreground">{author}</p>
-                <p className="text-sm text-muted-foreground">{location}</p>
+                <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 tracking-tighter text-slate-900 leading-[1.1]">
+                  Why People Trust <span className="text-primary italic underline decoration-primary/30">Sell Fast Inland Empire</span> To Buy Their Homes
+                </h2>
+                <p className="text-lg text-slate-600 mb-8 font-bold leading-relaxed">
+                  We aren't just another faceless investment firm. We are local professionals deeply committed to the Inland Empire community.
+                </p>
+                <div className="space-y-6 mb-10">
+                  {[
+                    { t: "Nearly A Decade of Experience", d: "Buying homes for cash with a proven track record of successful, honest closings." },
+                    { t: "Ethical Professional Standards", d: "We are held to a higher standard of transparency. We believe in win-win solutions or no deal at all." },
+                    { t: "Local & Family Owned", d: "Not a national franchise or a call center. You talk directly to the decision makers who know your neighborhood." },
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4">
+                      <div className="mt-1 bg-primary p-1.5 rounded-lg shadow-lg shadow-primary/20"><CheckCircle2 className="h-5 w-5 text-white" /></div>
+                      <div>
+                        <h4 className="text-sm font-black uppercase text-slate-900 tracking-tight">{item.t}</h4>
+                        <p className="text-sm text-slate-500 font-medium leading-snug">{item.d}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </motion.div>
+              <div className="space-y-6">
+                <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-xl relative">
+                  <div className="absolute -top-4 -left-4 bg-primary text-white p-3 rounded-2xl rotate-[-5deg] shadow-lg">
+                    <Award className="h-6 w-6" />
+                  </div>
+                  <p className="text-slate-600 leading-relaxed font-semibold italic text-lg mb-8">
+                    "Unlike the hundreds of impersonal cash buyers you see online, we are deep-rooted in the Inland Empire market. We handle every single transaction with the highest professional and ethical standards. When we buy your house, we buy it directly; meaning no listings, no showings, and zero repairs. You get a fast, transparent sale with no surprises at the closing table. We guarantee it."
+                  </p>
+                  <div className="pt-8 border-t border-slate-100 grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <p className="text-primary font-black text-2xl tracking-tighter">100%</p>
+                      <p className="text-[10px] font-black uppercase text-slate-400">Cash Guarantee</p>
+                    </div>
+                    <div>
+                      <p className="text-primary font-black text-2xl tracking-tighter">0</p>
+                      <p className="text-[10px] font-black uppercase text-slate-400">Hidden Fees</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-6 opacity-50 grayscale">
+                    <div className="flex items-center gap-2 font-black uppercase text-xs tracking-widest"><ShieldCheck className="h-4 w-4"/> Secure Data</div>
+                    <div className="flex items-center gap-2 font-black uppercase text-xs tracking-widest"><Scale className="h-4 w-4"/> Verified Legal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS ── */}
+      <section id="how-it-works" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 text-center mb-20">
+          <h2 className="text-5xl font-serif font-black tracking-tighter mb-6 text-slate-900 uppercase">Our Simplified 3-Step Process</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto font-bold text-lg leading-relaxed">
+            Selling a home doesn't have to be a nightmare. We've distilled the traditional 6-month process into three simple, straightforward steps.
+          </p>
+          <div className="h-2 w-24 bg-primary mx-auto mt-6"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+          {[
+            { 
+              icon: PhoneCall, 
+              title: "1. Initial Consultation", 
+              desc: "Tell us about your property. You can fill out our secure form or give us a quick call. We'll perform a market analysis and look at comparable sales in your area of the Inland Empire to establish a baseline for your offer—all within minutes." 
+            },
+            { 
+              icon: DollarSign, 
+              title: "2. Formal Cash Offer", 
+              desc: "If the property meets our buying criteria, we will present you with a fair, all-cash offer. There is never any obligation to accept. You have the time you need to review our offer and ask any questions. We are transparent about how we reach our numbers." 
+            },
+            { 
+              icon: Key, 
+              title: "3. Choose Your Closing", 
+              desc: "Once you accept, we open escrow at a reputable local title company. You pick the closing date that works for you—whether it's in 7 days or 60 days. We handle all the paperwork, pay for all closing costs, and you walk away with cash in hand." 
+            },
+          ].map((item, i) => (
+            <div key={i} className="relative p-10 bg-slate-50 rounded-3xl border border-slate-200 group hover:shadow-2xl transition-all duration-500">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white p-4 rounded-2xl shadow-lg border border-slate-100 group-hover:bg-primary transition-colors duration-500">
+                <item.icon className="h-8 w-8 text-primary group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-xl font-black mb-5 mt-4 uppercase tracking-tighter text-slate-900">{item.title}</h3>
+              <p className="text-slate-600 font-medium leading-relaxed text-sm">{item.desc}</p>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section id="final-cta" className="relative overflow-hidden py-28 md:py-40">
-        <img src={neighborhoodImg} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-[hsl(220,50%,10%)]/75 pointer-events-none" />
-
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-5">
-              Get Your Cash Offer Today
-            </h2>
-            <p className="text-lg md:text-xl text-white/75 mb-10">
-              Find out what your home is worth. No obligation. No pressure.
+      {/* ── SITUATIONS ── */}
+      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <img src={neighborhoodImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-5" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl md:text-5xl font-serif font-black mb-6 tracking-tighter uppercase">We Buy Houses In Any Condition Or Situation</h2>
+            <p className="text-slate-400 text-lg font-bold leading-relaxed italic">
+              "It doesn't matter why you need to sell. Our goal is to provide a stress-free solution to your real estate problems."
             </p>
-            <a href="#hero-form" data-testid="button-final-cta"
-              className="inline-flex justify-center items-center h-14 px-10 rounded-md bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-colors shadow-xl shadow-primary/30">
-              Get My Cash Offer <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </motion.div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: AlertCircle, label: "Facing Foreclosure", d: "Stop the auction process now." },
+              { icon: Building2, label: "Inherited Property", d: "Simple probate solutions." },
+              { icon: Users, label: "Problem Tenants", d: "We buy with renters in place." },
+              { icon: DollarSign, label: "Divorce Settlement", d: "Quick and fair asset division." },
+              { icon: Plane, label: "Relocating Fast", d: "Close on your timeline." },
+              { icon: Wrench, label: "Major Repairs Needed", d: "Foundation, roof, or fire." },
+              { icon: Clock, label: "Behind On Taxes", d: "Clear your debt instantly." },
+              { icon: Users2, label: "Vacant Properties", d: "End the maintenance costs." },
+            ].map((item, i) => (
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center gap-4 backdrop-blur-md group hover:bg-primary transition-all duration-300">
+                <item.icon className="h-10 w-10 text-primary group-hover:text-white" />
+                <div>
+                  <p className="font-black uppercase tracking-widest text-xs mb-1">{item.label}</p>
+                  <p className="text-[10px] text-slate-400 font-bold group-hover:text-white/80">{item.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section id="faqs" className="py-24 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-serif font-black tracking-tighter mb-4 text-slate-900 uppercase">Frequently Asked Questions</h2>
+            <p className="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">Full transparency for your peace of mind</p>
+          </div>
+          <div className="space-y-6">
+            {[
+              { q: "Do you pay a fair price for my property?", a: "Many of the houses we purchase are below market value so we can resell it at a profit to another homeowner after making repairs. However, in our experience, many sellers aren't necessarily looking for a large 'windfall' on the property. Instead, they appreciate that we can offer cash, we close very quickly, and no effort or expense is required on your part of fix up the property or pay agent fees." },
+              { q: "How do you determine the price to offer on my house?", a: "Our process is very straightforward. We look at the location of the property, what repairs are needed, the current condition of the property, and values of comparable houses sold in the Inland Empire area recently. We take many pieces of information into consideration and come up with a fair price that works for us and works for you too." },
+              { q: "Are there any fees or commissions to work with you?", a: "This is what makes us stand out from the traditional method of selling your house: There are NO fees or commissions when you sell your house directly to us. We’ll make you an offer, and if it’s a fit, then we’ll buy your house (and we’ll often pay for the closing costs too!). No hassle. No fees. We make our money after we pay for repairs on the house and sell it for a profit." },
+              { q: "How are you different from a real estate agent?", a: "Real estate agents list properties and hope that someone will buy them. The agent shows the properties to prospective buyers and then take a percentage of the sale price if they find a buyer. Often, the agent’s commission is 3-6% of the sale price of your house. We’re not agents, we’re home buyers. Our company actually buys houses. We don’t list houses. We’re the ones buying the house from you, and we pay with all cash." }
+            ].map((faq, i) => (
+              <div key={i} className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm group hover:border-primary transition-colors">
+                <h3 className="text-lg font-black text-slate-900 mb-4 flex items-center gap-3 italic leading-tight">
+                   <HelpCircle className="h-6 w-6 text-primary flex-shrink-0" /> {faq.q}
+                </h3>
+                <p className="text-slate-600 font-medium pl-9 leading-relaxed text-sm">{faq.a}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-foreground text-background py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <footer className="bg-slate-950 text-white py-20 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-8 text-primary">
+            <HomeIcon className="h-8 w-8" />
+            <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Sell Fast Inland Empire</span>
+          </div>
+          <p className="text-slate-500 font-bold text-xs uppercase tracking-[0.3em] mb-8">
+            Serving San Bernardino & Riverside Counties Since 2016
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mb-16 border-y border-white/5 py-12">
             <div>
-              <div className="flex items-center gap-2 mb-6">
-                <HomeIcon className="h-6 w-6 text-primary" />
-                <span className="font-serif font-bold text-xl tracking-tight">Sell Fast Inland Empire</span>
-              </div>
-              <p className="text-background/60 leading-relaxed max-w-xs">
-                The most trusted cash home buyers in the Inland Empire. We buy houses fast, for cash, in any condition.
-              </p>
+              <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Our Mission</h5>
+              <p className="text-slate-500 text-xs leading-relaxed font-medium">We provide a fast, fair, and honest way to sell your home in the Inland Empire. We believe in providing solutions that help homeowners move forward with their lives without the stress of traditional real estate transactions.</p>
             </div>
             <div>
-              <h4 className="font-bold mb-6">Contact Us</h4>
-              <ul className="space-y-4 text-background/60">
-                <li className="flex items-center gap-3"><PhoneCall className="h-5 w-5 text-primary" /> (626) 893-0240</li>
-                <li className="flex items-center gap-3"><MapPin className="h-5 w-5 text-primary" /> Inland Empire, CA</li>
-              </ul>
+              <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Service Areas</h5>
+              <p className="text-slate-500 text-xs leading-relaxed font-medium">Riverside, San Bernardino, Fontana, Moreno Valley, Rancho Cucamonga, Ontario, Corona, Victorville, Murrieta, Temecula, Rialto, Hesperia, and all surrounding IE neighborhoods.</p>
             </div>
             <div>
-              <h4 className="font-bold mb-6">Service Areas</h4>
-              <ul className="grid grid-cols-2 gap-2 text-background/60">
-                <li>Riverside</li>
-                <li>San Bernardino</li>
-                <li>Corona</li>
-                <li>Ontario</li>
-                <li>Moreno Valley</li>
-                <li>Fontana</li>
-                <li>Redlands</li>
-                <li>Rancho Cucamonga</li>
-              </ul>
+              <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Legal Disclaimer</h5>
+              <p className="text-slate-500 text-[10px] leading-relaxed font-medium italic">Sell Fast Inland Empire is a private real estate investment firm. We are not real estate agents or brokers. We buy properties directly from homeowners for cash. Closing times are subject to title and escrow availability.</p>
             </div>
           </div>
-          <div className="pt-8 border-t border-background/10 text-center text-sm text-background/40">
-            &copy; {new Date().getFullYear()} Sell Fast Inland Empire. All rights reserved.
-          </div>
+          <p className="text-slate-700 font-bold text-[10px] uppercase tracking-widest">
+            © {new Date().getFullYear()} Sell Fast Inland Empire • All Rights Reserved
+          </p>
         </div>
       </footer>
 
