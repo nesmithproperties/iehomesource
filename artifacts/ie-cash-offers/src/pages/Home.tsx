@@ -21,6 +21,7 @@ import {
   Users2 
 } from "lucide-react";
 import { useEffect } from "react";
+import { Link } from "wouter";
 
 import heroImg from "@/assets/images/hero-house.png";
 import handshakeImg from "@/assets/images/handshake.png";
@@ -50,6 +51,7 @@ export default function Home() {
             <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">Sell Fast Inland Empire</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
+            <Link href="/" className="text-slate-600 hover:text-primary transition-colors uppercase tracking-widest">Home</Link>
             <a href="#why-us" className="text-slate-600 hover:text-primary transition-colors uppercase tracking-widest">Why Choose Us</a>
             <a href="#how-it-works" className="text-slate-600 hover:text-primary transition-colors uppercase tracking-widest">Our Process</a>
             <a href="#faqs" className="text-slate-600 hover:text-primary transition-colors uppercase tracking-widest">Questions</a>
@@ -286,24 +288,47 @@ export default function Home() {
             <HomeIcon className="h-8 w-8" />
             <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Sell Fast Inland Empire</span>
           </div>
-          <p className="text-slate-500 font-bold text-xs uppercase tracking-[0.3em] mb-8">
+          <p className="text-slate-400 font-bold text-sm uppercase tracking-[0.3em] mb-8">
             Serving San Bernardino & Riverside Counties Since 2016
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mb-16 border-y border-white/5 py-12">
             <div>
               <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Our Mission</h5>
-              <p className="text-slate-500 text-xs leading-relaxed font-medium">We provide a fast, fair, and honest way to sell your home in the Inland Empire. We believe in providing solutions that help homeowners move forward with their lives without the stress of traditional real estate transactions.</p>
+              <p className="text-slate-300 text-sm leading-relaxed font-medium">We provide a fast, fair, and honest way to sell your home in the Inland Empire. We believe in providing solutions that help homeowners move forward with their lives without the stress of traditional real estate transactions.</p>
             </div>
             <div>
               <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Service Areas</h5>
-              <p className="text-slate-500 text-xs leading-relaxed font-medium">Riverside, San Bernardino, Fontana, Moreno Valley, Rancho Cucamonga, Ontario, Corona, Victorville, Murrieta, Temecula, Rialto, Hesperia, and all surrounding IE neighborhoods.</p>
+              <div className="flex flex-wrap gap-x-3 gap-y-2">
+                {[
+                  { label: "Riverside", slug: "riverside" },
+                  { label: "San Bernardino", slug: "san-bernardino" },
+                  { label: "Fontana", slug: "fontana" },
+                  { label: "Moreno Valley", slug: "moreno-valley" },
+                  { label: "Rancho Cucamonga", slug: "rancho-cucamonga" },
+                  { label: "Ontario", slug: "ontario" },
+                  { label: "Corona", slug: "corona" },
+                  { label: "Victorville", slug: "victorville" },
+                  { label: "Murrieta", slug: "murrieta" },
+                  { label: "Temecula", slug: "temecula" },
+                  { label: "Rialto", slug: "rialto" },
+                  { label: "Hesperia", slug: "hesperia" },
+                ].map(({ label, slug }) => (
+                  <Link
+                    key={slug}
+                    href={`/${slug}`}
+                    className="text-slate-300 hover:text-primary text-sm font-medium transition-colors"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
             </div>
             <div>
               <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Legal Disclaimer</h5>
-              <p className="text-slate-500 text-[10px] leading-relaxed font-medium italic">Sell Fast Inland Empire is a private real estate investment firm. We are not real estate agents or brokers. We buy properties directly from homeowners for cash. Closing times are subject to title and escrow availability.</p>
+              <p className="text-slate-300 text-sm leading-relaxed font-medium italic">Sell Fast Inland Empire is a private real estate investment firm. We are not real estate agents or brokers. We buy properties directly from homeowners for cash. Closing times are subject to title and escrow availability.</p>
             </div>
           </div>
-          <p className="text-slate-700 font-bold text-[10px] uppercase tracking-widest">
+          <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">
             © {new Date().getFullYear()} Sell Fast Inland Empire • All Rights Reserved
           </p>
         </div>
