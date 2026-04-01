@@ -20,6 +20,7 @@ import {
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { cityMap, cities } from "@/data/cityData";
+import { getCityImage } from "@/data/cityImages";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -55,8 +56,8 @@ export default function SellMyHouseFast({ citySlug }: { citySlug: string }) {
     );
   }
 
-  const { name, county, unsplashQuery, tagline, intro, whyUs, neighborhoods, highlights } = data;
-  const heroImage = `https://source.unsplash.com/1600x900/?${unsplashQuery}`;
+  const { name, county, tagline, intro, whyUs, neighborhoods, highlights } = data;
+  const heroImage = getCityImage(citySlug);
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
