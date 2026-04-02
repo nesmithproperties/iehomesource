@@ -19,8 +19,11 @@ export default function CitiesPage() {
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
             <Link href="/" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Home</Link>
             <Link href="/cities" className="text-cyan-600 uppercase tracking-widest">Cities</Link>
+            <Link href="/#why-us" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Why Choose Us</Link>
+            <Link href="/#how-it-works" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Our Process</Link>
+            <Link href="/#faqs" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">FAQs</Link>
             <a href="tel:6268930240" className="flex items-center gap-2 bg-cyan-600 text-white px-6 py-2.5 rounded-full font-black hover:shadow-xl transition-all">
-              <PhoneCall className="h-4 w-4" /> (909) 202-6006
+              <PhoneCall className="h-4 w-4" /> (626) 893-0240
             </a>
           </div>
         </div>
