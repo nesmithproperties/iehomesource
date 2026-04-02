@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
-import PodioForm from "@/components/PodioForm";
 import { cities } from "@/data/cityData";
 
 const heroImg = "https://media.california.com/media/_versions_webp/articles/california_inland_empire__4088x2725____v1800x750__.webp";
@@ -59,8 +58,8 @@ export default function Home() {
             <a href="#why-us" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Why Choose Us</a>
             <a href="#how-it-works" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Our Process</a>
             <a href="#faqs" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">FAQs</a>
-            <a href="tel:6268930240" className="flex items-center gap-2 bg-cyan-600 text-white px-6 py-2.5 rounded-full font-black hover:shadow-xl transition-all">
-              <PhoneCall className="h-4 w-4" /> (626) 893-0240
+            <a href="tel:9092026006" className="flex items-center gap-2 bg-cyan-600 text-white px-6 py-2.5 rounded-full font-black hover:shadow-xl transition-all">
+              <PhoneCall className="h-4 w-4" /> (909) 202-6006
             </a>
           </div>
         </div>
@@ -72,7 +71,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/40" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="lg:col-span-6 text-white text-center lg:text-left">
+            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="lg:col-span-12 text-white text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-cyan-600 text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-lg">
                 <BadgeCheck className="h-3 w-3" /> Professional Real Estate Solutions
               </div>
@@ -99,11 +98,6 @@ export default function Home() {
                     <span className="text-xs font-black uppercase tracking-tight text-white/90">{item}</span>
                   </div>
                 ))}
-              </div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="lg:col-span-6 w-full flex justify-center lg:justify-end">
-              <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-t-8 border-cyan-600 w-full max-w-[520px]">
-                <PodioForm />
               </div>
             </motion.div>
           </div>

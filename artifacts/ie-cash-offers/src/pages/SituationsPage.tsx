@@ -148,8 +148,8 @@ export default function SituationsPage() {
             <a href={`${import.meta.env.BASE_URL}#why-us`} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Why Choose Us</a>
             <a href={`${import.meta.env.BASE_URL}#how-it-works`} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Our Process</a>
             <a href={`${import.meta.env.BASE_URL}#faqs`} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">FAQs</a>
-            <a href="tel:6268930240" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
-              <PhoneCall className="h-4 w-4" /> (626) 893-0240
+            <a href="tel:9092026006" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
+              <PhoneCall className="h-4 w-4" /> (909) 202-6006
             </a>
           </div>
         </div>
@@ -168,10 +168,10 @@ export default function SituationsPage() {
             No matter what you're going through, there's a fast, fair, and honest path forward. Explore the situations below and find the information that applies to you.
           </p>
           <a
-            href="tel:6268930240"
+            href="tel:9092026006"
             className="inline-flex items-center gap-2 bg-[#0891b2] text-white px-8 py-4 rounded-full font-black text-lg hover:bg-[#0e7490] transition-all shadow-xl shadow-cyan-900/30"
           >
-            <PhoneCall className="h-5 w-5" /> Call Now: (626) 893-0240
+            <PhoneCall className="h-5 w-5" /> Call Now: (909) 202-6006
           </a>
         </motion.div>
       </section>
@@ -224,7 +224,7 @@ export default function SituationsPage() {
                 <CheckCircle2 className="h-6 w-6 text-[#0891b2] flex-shrink-0" />
                 <p className="text-slate-700 font-bold text-sm flex-1">{s.cta}</p>
                 <a
-                  href="tel:6268930240"
+                  href="tel:9092026006"
                   className="flex items-center gap-2 bg-[#0891b2] text-white px-5 py-3 rounded-full font-black text-sm hover:bg-[#0e7490] transition-all whitespace-nowrap"
                 >
                   <PhoneCall className="h-4 w-4" /> Call Now
@@ -248,10 +248,10 @@ export default function SituationsPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:6268930240"
+            href="tel:9092026006"
             className="inline-flex items-center justify-center gap-2 bg-white text-[#0891b2] px-8 py-4 rounded-full font-black text-lg hover:bg-slate-100 transition-all"
           >
-            <PhoneCall className="h-5 w-5" /> (626) 893-0240
+            <PhoneCall className="h-5 w-5" /> (909) 202-6006
           </a>
           <Link
             href="/"

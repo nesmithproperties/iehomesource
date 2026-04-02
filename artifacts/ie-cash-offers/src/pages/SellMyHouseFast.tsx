@@ -22,7 +22,6 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
-import PodioForm from "@/components/PodioForm";
 import { cityMap, cities } from "@/data/cityData";
 import { getCityImage } from "@/data/cityImages";
 
@@ -72,7 +71,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             <Link href="/#why-us" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Why Choose Us</Link>
             <Link href="/#how-it-works" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Our Process</Link>
             <Link href="/#faqs" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">FAQs</Link>
-            <a href="tel:6268930240" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
+            <a href="tel:9092026006" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
               <PhoneCall className="h-4 w-4" /> (902) 202-6006
             </a>
           </div>
@@ -92,7 +91,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="lg:col-span-7 text-white text-center lg:text-left">
+            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="lg:col-span-12 text-white text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#0891b2] text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-lg">
                 <MapPin className="h-3 w-3" /> {name}, CA • {county}
               </div>
@@ -120,11 +119,6 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} className="lg:col-span-5 w-full flex justify-center lg:justify-end">
-              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-t-[12px] border-[#0891b2] w-full max-w-[480px]">
-                <PodioForm />
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
