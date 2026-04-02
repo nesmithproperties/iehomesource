@@ -72,7 +72,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             <Link href="/#how-it-works" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Our Process</Link>
             <Link href="/#faqs" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">FAQs</Link>
             <a href="tel:6268930240" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
-              <PhoneCall className="h-4 w-4" /> (626) 893-0240
+              <PhoneCall className="h-4 w-4" /> (902) 202-6006
             </a>
           </div>
         </div>
@@ -98,11 +98,19 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black leading-[1.05] mb-6 tracking-tight drop-shadow-2xl">
                 {tagline}
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed font-bold">
+              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed font-bold line-clamp-3">
                 {intro}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
-                {highlights.map((item: string) => (
+                {highlights
+                  .filter((h: string) =>
+                    !h.toLowerCase().includes('closing cost') &&
+                    !h.toLowerCase().includes('showings') &&
+                    !h.toLowerCase().includes('open house') &&
+                    !h.toLowerCase().includes('cleaning')
+                  )
+                  .slice(0, 4)
+                  .map((item: string) => (
                   <div key={item} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
                     <CheckCircle2 className="h-5 w-5 text-[#22d3ee] flex-shrink-0" />
                     <span className="text-xs font-black uppercase tracking-tight text-white/90">{item}</span>
