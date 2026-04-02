@@ -143,7 +143,7 @@ export default function SituationsPage() {
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
-            <Link href="/" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Home</Link>
+            <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Home</Link>
             <a href={`${import.meta.env.BASE_URL}#why-us`} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Why Choose Us</a>
             <a href={`${import.meta.env.BASE_URL}#how-it-works`} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Our Process</a>
             <a href={`${import.meta.env.BASE_URL}#faqs`} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">FAQs</a>

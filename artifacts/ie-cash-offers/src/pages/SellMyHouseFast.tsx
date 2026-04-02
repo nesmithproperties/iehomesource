@@ -65,7 +65,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
-            <Link href="/" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Home</Link>
+            <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Home</Link>
             <Link href="/#why-us" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Why Choose Us</Link>
             <Link href="/#how-it-works" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Our Process</Link>
             <a href="tel:6268930240" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
