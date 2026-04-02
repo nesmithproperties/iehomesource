@@ -10,6 +10,7 @@ import {
   PhoneCall,
   Plane,
   ShieldCheck,
+  Star,
   Users,
   Users2,
   Wrench,
@@ -127,16 +128,21 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-black mb-6 tracking-tighter text-slate-900 uppercase">
-            Trusted Cash Home Buyers in <span className="text-[#0891b2]">{name}, CA</span>
+            Expert Cash Home Buyers in <span className="text-[#0891b2]">{name} & the Inland Empire</span>
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10 max-w-3xl mx-auto">
-            Since 2004, Inland Empire Cash Offers has been helping California homeowners sell their houses fast — 
-            without the stress, delays, and fees of the traditional real estate market. As a locally owned and 
-            operated cash home buying company based right here in the Inland Empire, we buy houses as-is in {name} 
-            and throughout Southern California. No repairs. No commissions. No call centers. Just a fair, 
-            honest cash offer and a closing date that works for you — in as little as 7 days.
+          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-4 max-w-3xl mx-auto">
+            Since 2004, Inland Empire Cash Offers has been one of Southern California's most trusted direct home buying companies. 
+            We were founded right here in the Inland Empire, and this region is where our roots run deepest — from Riverside and 
+            San Bernardino to the High Desert and beyond. But our reach extends across California, helping homeowners throughout 
+            the state who need a fast, fair, and hassle-free sale.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10 max-w-3xl mx-auto">
+            Unlike national iBuyers or out-of-state hedge funds that treat your home like a spreadsheet line item, we are a 
+            locally owned, family-operated company. We buy houses as-is in {name} and throughout Southern California — no repairs, 
+            no commissions, no call centers. Just a straightforward cash offer and a closing date that works for you, in as little 
+            as 7 days.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left mb-16">
             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
               <DollarSign className="h-8 w-8 text-[#0891b2] mb-3" />
               <h4 className="font-black uppercase text-sm tracking-widest mb-2 text-slate-900">Fair Cash Offers</h4>
@@ -145,12 +151,66 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
               <ShieldCheck className="h-8 w-8 text-[#0891b2] mb-3" />
               <h4 className="font-black uppercase text-sm tracking-widest mb-2 text-slate-900">Zero Hidden Fees</h4>
-              <p className="text-slate-600 text-sm font-medium leading-relaxed">There are no agent commissions, no closing cost surprises, and no last-minute deductions. The offer we make is the amount you receive at closing. Period.</p>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">No agent commissions, no closing cost surprises, no last-minute deductions. The offer we make is the exact amount you receive at closing. Period.</p>
             </div>
             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
               <Award className="h-8 w-8 text-[#0891b2] mb-3" />
-              <h4 className="font-black uppercase text-sm tracking-widest mb-2 text-slate-900">Local Experts</h4>
-              <p className="text-slate-600 text-sm font-medium leading-relaxed">We're not a national hedge fund. We're a local Southern California team that actually lives and works in the communities we serve — including {name}.</p>
+              <h4 className="font-black uppercase text-sm tracking-widest mb-2 text-slate-900">Local IE Experts</h4>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">We're not a national hedge fund. We're a local Inland Empire team that actually lives and works in the communities we serve — including {name}.</p>
+            </div>
+          </div>
+
+          {/* WHY CALIFORNIA HOMEBUYERS TRUST US */}
+          <div className="bg-slate-950 rounded-3xl p-10 text-left">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl md:text-3xl font-serif font-black tracking-tighter text-white uppercase mb-3">
+                Why California Homeowners Trust Us
+              </h3>
+              <p className="text-slate-400 font-medium text-base max-w-xl mx-auto">
+                Rooted in the Inland Empire. Trusted across California. Here's what sets us apart from every other buyer in the market.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {[
+                {
+                  icon: Star,
+                  title: "20+ Years of Experience",
+                  text: "Since 2004, we've bought hundreds of homes across Southern California. We've seen every situation — and we know how to handle each one with speed, care, and professionalism.",
+                },
+                {
+                  icon: Users,
+                  title: "You Talk Directly to the Decision-Maker",
+                  text: "No call centers. No middlemen. No runaround. When you reach out to us, you speak directly with the person making the offer — someone who knows {name} and genuinely wants to help.",
+                },
+                {
+                  icon: ShieldCheck,
+                  title: "Fully Transparent Process",
+                  text: "We walk you through every step — from the initial offer to the final closing documents. There are no surprises, no fine print traps, and no pressure. Just clear, honest communication from start to finish.",
+                },
+                {
+                  icon: MapPin,
+                  title: "Inland Empire Roots, California Reach",
+                  text: "We were built in the Inland Empire and know it better than anyone. But we also serve homeowners throughout Los Angeles, the High Desert, the Coachella Valley, and broader Southern California.",
+                },
+                {
+                  icon: CheckCircle2,
+                  title: "We Follow Through — Every Time",
+                  text: "Our offers don't fall through. We use our own cash — no lender approvals, no financing contingencies, no last-minute cancellations. When we make you an offer, we mean it.",
+                },
+                {
+                  icon: DollarSign,
+                  title: "No Repairs, No Cleaning, No Staging",
+                  text: "Sell your {name} home exactly as it sits today. Leave behind what you don't want. We handle the cleanup, the repairs, and everything else after closing — so you don't have to.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-5">
+                  <item.icon className="h-6 w-6 text-[#22d3ee] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-black uppercase tracking-widest text-xs text-white mb-1">{item.title}</p>
+                    <p className="text-slate-400 text-sm font-medium leading-relaxed">{item.text.replace('{name}', name)}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
