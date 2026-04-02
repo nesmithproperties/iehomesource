@@ -206,14 +206,14 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { icon: AlertCircle, label: "Facing Foreclosure", d: "Stop the auction process now.", anchor: "foreclosure" },
-              { icon: Building2, label: "Inherited Property", d: "Simple probate solutions.", anchor: "inherited" },
-              { icon: Users, label: "Problem Tenants", d: "We buy with renters in place.", anchor: "tenants" },
-              { icon: DollarSign, label: "Divorce Settlement", d: "Quick and fair asset division.", anchor: "divorce" },
-              { icon: Plane, label: "Relocating Fast", d: "Close on your timeline.", anchor: "relocation" },
-              { icon: Wrench, label: "Major Repairs Needed", d: "Foundation, roof, or fire.", anchor: "repairs" },
-              { icon: Clock, label: "Behind On Taxes", d: "Clear your debt instantly.", anchor: "payments" },
-              { icon: Users2, label: "Vacant Properties", d: "End the maintenance costs.", anchor: "vacant" },
+              { icon: AlertCircle, label: "Facing Foreclosure", d: "Stop the auction before it's too late. We move fast so you can avoid lasting credit damage.", anchor: "foreclosure" },
+              { icon: Building2, label: "Inherited Property", d: "We navigate probate and estate situations with care, making the process simple for your family.", anchor: "inherited" },
+              { icon: Users, label: "Problem Tenants", d: "We purchase homes with renters already in place — no evictions required on your end.", anchor: "tenants" },
+              { icon: DollarSign, label: "Divorce Settlement", d: "A quick, clean sale means a fair division of assets without dragging the process out in court.", anchor: "divorce" },
+              { icon: Plane, label: "Relocating Fast", d: "Job transfer or life change? Close on your schedule so you can move forward without the wait.", anchor: "relocation" },
+              { icon: Wrench, label: "Major Repairs Needed", d: "From foundation issues to roof damage or fire distress, we buy as-is so you don't spend a dime on repairs.", anchor: "repairs" },
+              { icon: Clock, label: "Behind On Taxes", d: "Clear your tax liens and stop penalties from piling up. A fast cash sale can wipe the slate clean.", anchor: "payments" },
+              { icon: Users2, label: "Vacant Properties", d: "Empty homes rack up insurance, maintenance, and liability costs. We'll take it off your hands quickly.", anchor: "vacant" },
             ].map((item, i) => (
               <a
                 key={i}
@@ -222,10 +222,10 @@ export default function Home() {
               >
                 <item.icon className="h-10 w-10 text-cyan-400 group-hover:text-white" />
                 <div>
-                  <p className="font-black uppercase tracking-widest text-xs mb-1 text-white/90">
+                  <p className="font-black uppercase tracking-widest text-xs mb-2 text-white/90">
                     {item.label}
                   </p>
-                  <p className="text-[10px] text-slate-300 font-bold group-hover:text-white/80">
+                  <p className="text-[11px] text-slate-300 font-medium leading-relaxed group-hover:text-white/80">
                     {item.d}
                   </p>
                 </div>
@@ -234,6 +234,23 @@ export default function Home() {
                 </span>
               </a>
             ))}
+          </div>
+
+          {/* CTA below grid */}
+          <div className="mt-12 text-center">
+            <h3 className="text-2xl md:text-3xl font-serif font-black uppercase tracking-tighter text-white mb-3">
+              Have a unique situation?
+            </h3>
+            <p className="text-slate-300 font-medium text-base max-w-xl mx-auto mb-8">
+              Every homeowner's journey is different. If you don't see your specific case here, don't worry — we've seen it all and we're here to help.
+            </p>
+            <a
+              href="#hero"
+              onClick={(e) => { e.preventDefault(); document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" }); }}
+              className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-colors duration-300"
+            >
+              Get Your Fair Offer
+            </a>
           </div>
         </div>
       </section>
