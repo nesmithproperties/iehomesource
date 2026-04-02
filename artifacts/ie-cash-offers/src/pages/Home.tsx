@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
+import PodioForm from "@/components/PodioForm";
 import { cities } from "@/data/cityData";
 
 const heroImg = "https://media.california.com/media/_versions_webp/articles/california_inland_empire__4088x2725____v1800x750__.webp";
@@ -102,9 +103,7 @@ export default function Home() {
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="lg:col-span-6 w-full flex justify-center lg:justify-end">
               <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-t-8 border-cyan-600 w-full max-w-[520px]">
-                <div className="w-full h-[480px] p-4 bg-white flex items-center justify-center">
-                  <iframe src="https://api.leadconnectorhq.com/widget/form/e1P4JJeMVFN4MUZ1NS7o" style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }} title="Form Webpage" />
-                </div>
+                <PodioForm />
               </div>
             </motion.div>
           </div>

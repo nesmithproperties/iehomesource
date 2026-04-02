@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
+import PodioForm from "@/components/PodioForm";
 import heroImg from "@/assets/images/hero-house.png";
 import { cities } from "@/data/cityData";
 
@@ -246,14 +247,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} className="lg:col-span-5 w-full flex justify-center lg:justify-end">
               <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-t-[12px] border-[#0891b2] w-full max-w-[480px]">
-                <div className="w-full h-[540px] p-2 bg-white flex items-center justify-center">
-                  <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/e1P4JJeMVFN4MUZ1NS7o"
-                    style={{ width: '100%', height: '100%', border: 'none' }}
-                    id={`inline-city-${citySlug}`}
-                    title={`Get a Cash Offer in ${city}`}
-                  />
-                </div>
+                <PodioForm />
               </div>
             </motion.div>
           </div>
