@@ -124,30 +124,6 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
         </div>
       </section>
 
-      {/* ── EXPERT HOME BUYERS ── */}
-      <section className="py-16 bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 tracking-tighter text-slate-900 uppercase">
-            Expert Cash Home Buyers in <span className="text-[#0891b2]">{name} & the Inland Empire</span>
-          </h2>
-          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-6">
-            Since 2004, Inland Empire Cash Offers has been one of Southern California's most trusted direct home buying companies.
-            We were founded right here in the Inland Empire — this is where our roots run deepest, from Riverside and San Bernardino
-            to the High Desert and every community in between. Unlike national iBuyers or out-of-state hedge funds that treat your
-            home like a number on a spreadsheet, we are a locally owned, family-operated company. When you call us, you speak
-            directly to the decision-maker — a real person who knows {name} and genuinely cares about your situation.
-          </p>
-          <p className="text-xl text-[#0891b2] font-bold leading-relaxed mb-6">
-            We offer fair, all-cash deals with no strings attached — no repairs required, no agent commissions, and no hidden fees of any kind.
-          </p>
-          <p className="text-lg text-slate-600 leading-relaxed font-medium">
-            Whether you're in {name} or anywhere else across Southern California, our process is simple: we make you a fair cash
-            offer within 24 hours, you choose the closing date, and we handle everything else. <span className="text-slate-900 font-bold">Close in as little as 7 days
-            — or on whatever timeline works best for you.</span> No pressure. No hassle. Just a clean, straightforward sale.
-          </p>
-        </div>
-      </section>
-
       {/* ── SIMPLIFIED 3-STEP PROCESS ── */}
       <section className="py-20 bg-slate-50 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4">
