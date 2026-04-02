@@ -186,63 +186,33 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              {
-                icon: AlertCircle,
-                label: "Facing Foreclosure",
-                d: "Stop the auction process now.",
-              },
-              {
-                icon: Building2,
-                label: "Inherited Property",
-                d: "Simple probate solutions.",
-              },
-              {
-                icon: Users,
-                label: "Problem Tenants",
-                d: "We buy with renters in place.",
-              },
-              {
-                icon: DollarSign,
-                label: "Divorce Settlement",
-                d: "Quick and fair asset division.",
-              },
-              {
-                icon: Plane,
-                label: "Relocating Fast",
-                d: "Close on your timeline.",
-              },
-              {
-                icon: Wrench,
-                label: "Major Repairs Needed",
-                d: "Foundation, roof, or fire.",
-              },
-              {
-                icon: Clock,
-                label: "Behind On Taxes",
-                d: "Clear your debt instantly.",
-              },
-              {
-                icon: Users2,
-                label: "Vacant Properties",
-                d: "End the maintenance costs.",
-              },
+              { icon: AlertCircle, label: "Facing Foreclosure", d: "Stop the auction process now.", anchor: "foreclosure" },
+              { icon: Building2, label: "Inherited Property", d: "Simple probate solutions.", anchor: "inherited" },
+              { icon: Users, label: "Problem Tenants", d: "We buy with renters in place.", anchor: "tenants" },
+              { icon: DollarSign, label: "Divorce Settlement", d: "Quick and fair asset division.", anchor: "divorce" },
+              { icon: Plane, label: "Relocating Fast", d: "Close on your timeline.", anchor: "relocation" },
+              { icon: Wrench, label: "Major Repairs Needed", d: "Foundation, roof, or fire.", anchor: "repairs" },
+              { icon: Clock, label: "Behind On Taxes", d: "Clear your debt instantly.", anchor: "payments" },
+              { icon: Users2, label: "Vacant Properties", d: "End the maintenance costs.", anchor: "vacant" },
             ].map((item, i) => (
-              <div
+              <a
                 key={i}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center gap-4 backdrop-blur-md group hover:bg-cyan-600 transition-all duration-300"
+                href={`${import.meta.env.BASE_URL}we-buy-houses-any-condition-california#${item.anchor}`}
+                className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center gap-4 backdrop-blur-md group hover:bg-cyan-600 transition-all duration-300 cursor-pointer"
               >
                 <item.icon className="h-10 w-10 text-cyan-400 group-hover:text-white" />
                 <div>
-                  {/* Item Label - Adjusted to white/90 */}
                   <p className="font-black uppercase tracking-widest text-xs mb-1 text-white/90">
                     {item.label}
                   </p>
-                  {/* Item Description - Light gray for contrast */}
                   <p className="text-[10px] text-slate-300 font-bold group-hover:text-white/80">
                     {item.d}
                   </p>
                 </div>
-              </div>
+                <span className="text-[9px] font-black uppercase tracking-widest text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity group-hover:text-white">
+                  Learn More →
+                </span>
+              </a>
             ))}
           </div>
         </div>

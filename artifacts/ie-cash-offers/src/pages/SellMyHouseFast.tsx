@@ -271,7 +271,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             ].map((item, i) => (
               <a
                 key={i}
-                href={`/we-buy-houses-any-condition-california#${item.anchor}`}
+                href={`${import.meta.env.BASE_URL}we-buy-houses-any-condition-california#${item.anchor}`}
                 className="bg-slate-800/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col items-center gap-4 hover:border-[#0891b2] transition-all group cursor-pointer"
               >
                 <item.icon className="h-10 w-10 text-cyan-400 group-hover:scale-110 transition-transform" />

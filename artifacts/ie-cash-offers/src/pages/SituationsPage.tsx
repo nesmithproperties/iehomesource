@@ -118,13 +118,16 @@ const situations = [
 
 export default function SituationsPage() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     const hash = window.location.hash;
     if (hash) {
       setTimeout(() => {
         const el = document.querySelector(hash);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+    } else {
+      window.scrollTo(0, 0);
     }
   }, []);
 
