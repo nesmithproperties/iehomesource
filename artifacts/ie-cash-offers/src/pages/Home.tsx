@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="py-32 bg-slate-50/50">
+      <section id="how-it-works" className="py-32 bg-cyan-50/40">
         <div className="max-w-7xl mx-auto px-4 text-center mb-20">
           <h2 className="text-5xl font-serif font-black tracking-tighter mb-6 text-slate-900 uppercase">
             Our Simplified 3-Step Process
@@ -157,20 +157,20 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
-            { 
-              icon: PhoneCall, 
-              title: "1. Initial Consultation", 
-              desc: "Tell us about your property. You can fill out our secure form or give us a quick call. We'll perform a market analysis within minutes." 
+            {
+              icon: PhoneCall,
+              title: "1. Initial Consultation",
+              desc: "Tell us about your property — you can fill out our secure online form or give us a quick call at any time. We'll review the details and perform a local market analysis within minutes. There's no commitment required, and the entire conversation is completely free and pressure-free.",
             },
-            { 
-              icon: DollarSign, 
-              title: "2. Formal Cash Offer", 
-              desc: "If the property meets our criteria, we will present you with a fair, all-cash offer. There is never any obligation to accept." 
+            {
+              icon: DollarSign,
+              title: "2. Formal Cash Offer",
+              desc: "If your property meets our buying criteria, we'll present you with a fair, all-cash offer based on real Inland Empire market data — not a lowball algorithm. You're never obligated to accept, and we'll walk you through every number so you understand exactly how we arrived at the figure.",
             },
-            { 
-              icon: Key, 
-              title: "3. Choose Your Closing", 
-              desc: "Once you accept, we open escrow at a reputable local title company. You pick the closing date that works for you." 
+            {
+              icon: Key,
+              title: "3. Choose Your Closing",
+              desc: "Once you accept, we open escrow with a reputable local title company and handle all the paperwork on your behalf. You simply pick the closing date that works best for you — whether that's in 7 days or 60 days — and we'll be ready. No delays, no financing contingencies, no surprises.",
             },
           ].map((item, i) => (
             <div key={i} className="relative p-10 bg-white rounded-3xl border border-slate-200 group hover:shadow-2xl transition-all duration-500">
