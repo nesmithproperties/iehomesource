@@ -89,7 +89,6 @@ export default function Home() {
                   "No Agent Commissions or Fees",
                   "Close On Your Preferred Date",
                   "We Buy In 100% As-Is Condition",
-                  "We Pay ALL Closing Costs",
                   "No Cleaning or Repairs Needed",
                   "Simple, Stress-Free Process",
                   "Fast Cash Home Offer",

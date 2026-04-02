@@ -62,7 +62,7 @@ export default function CitiesPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent" />
                     <div className="absolute bottom-4 left-4">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-cyan-400 mb-1">{city.county}</p>
+                      <span className="inline-block bg-cyan-700 border border-cyan-500 text-white text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded mb-2">{city.county}</span>
                       <h2 className="text-2xl font-serif font-black text-white tracking-tighter">{city.name}</h2>
                     </div>
                   </div>
