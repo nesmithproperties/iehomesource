@@ -321,24 +321,58 @@ export default function Home() {
 
       {/* FAQ */}
       <section id="faqs" className="py-24 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black tracking-tighter mb-4 text-slate-900 uppercase">Frequently Asked Questions</h2>
+            <p className="text-slate-500 font-medium text-lg max-w-2xl mx-auto">Everything you need to know about selling your home to us — answered honestly.</p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-5">
             {[
-              { q: "Do you pay a fair price for my property?", a: "We offer cash, we close very quickly, and no effort or expense is required on your part to fix up the property." },
-              { q: "How do you determine the offer price?", a: "We look at the location, repairs needed, and values of comparable houses sold in the Inland Empire recently." },
-              { q: "Are there any fees or commissions?", a: "There are NO fees or commissions when you sell your house directly to us." },
-              { q: "How are you different from an agent?", a: "Agents list properties; we are the ones actually buying the house with cash." },
+              {
+                q: "How fast can you buy my house?",
+                a: "We can close in as little as 7 days. Most cash transactions close within 2–3 weeks. We work on your timeline and can accommodate faster or slower closings based on your needs. Our streamlined process eliminates traditional delays like financing approvals and lengthy inspections.",
+              },
+              {
+                q: "Do you buy houses in any condition?",
+                a: "Yes! We buy houses in any condition — no repairs needed. Whether your house needs major repairs, has fire damage, foundation issues, or is perfectly move-in ready, we'll make you a fair cash offer. You don't need to clean, stage, or fix anything.",
+              },
+              {
+                q: "What areas do you buy houses in?",
+                a: "We buy houses throughout the entire Inland Empire and surrounding counties, including all local neighborhoods and nearby cities across Southern California. If you're unsure if we cover your area, just give us a call!",
+              },
+              {
+                q: "Do you pay a fair price for my property?",
+                a: "Absolutely. Our offers are based on real local market data — not lowball algorithms. We factor in location, condition, and comparable sales in your area. Because we buy with cash and cover closing costs, sellers often net more than they expect compared to a traditional sale with agent fees and repair demands.",
+              },
+              {
+                q: "Are there any fees or commissions?",
+                a: "None whatsoever. There are no agent commissions, no listing fees, no closing cost surprises, and no hidden deductions. The offer we make is the exact amount you walk away with at closing. Period.",
+              },
+              {
+                q: "How are you different from a real estate agent?",
+                a: "Agents list your property and hope a buyer comes — a process that can take months, require repairs, and cost you 5–6% in commissions. We are the actual buyers. We make you a direct cash offer, skip the showings and open houses, and close on a date you choose. No middlemen, no waiting.",
+              },
             ].map((faq, i) => (
               <div key={i} className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm group hover:border-cyan-600 transition-colors">
-                <h3 className="text-lg font-black text-slate-900 mb-4 flex items-center gap-3 italic leading-tight">
-                  <HelpCircle className="h-6 w-6 text-cyan-600 flex-shrink-0" /> {faq.q}
+                <h3 className="text-lg font-black text-slate-900 mb-3 flex items-start gap-3 leading-tight">
+                  <HelpCircle className="h-6 w-6 text-cyan-600 flex-shrink-0 mt-0.5" /> {faq.q}
                 </h3>
-                <p className="text-slate-600 font-medium pl-9 leading-relaxed text-sm">{faq.a}</p>
+                <p className="text-slate-600 font-medium pl-9 leading-relaxed">{faq.a}</p>
               </div>
             ))}
+          </div>
+
+          {/* FAQ CTA */}
+          <div className="mt-14 text-center">
+            <p className="text-lg font-black uppercase tracking-widest text-slate-900 mb-2">Have a unique situation?</p>
+            <p className="text-slate-500 font-medium mb-8 max-w-xl mx-auto">Every homeowner's journey is different. If your question isn't answered here, we're always just a call or message away.</p>
+            <a
+              href="#hero"
+              onClick={(e) => { e.preventDefault(); document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" }); }}
+              className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-colors duration-300"
+            >
+              Ask a Question
+            </a>
           </div>
         </div>
       </section>
