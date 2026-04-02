@@ -113,7 +113,7 @@ export default function Home() {
 
       {/* ── WHY TRUST US ── */}
       <section id="why-us" className="py-24 bg-white border-b border-slate-100">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+        <div className="max-w-5xl mx-auto px-4 text-center">
 
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#e1f9fe] border border-[#d6f6fd] text-[#00a8cc] text-[11px] font-black uppercase tracking-[0.05em] mb-8">
             <BadgeCheck className="h-3.5 w-3.5" /> Trusted by over 300 families
