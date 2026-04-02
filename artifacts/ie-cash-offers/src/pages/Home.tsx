@@ -239,26 +239,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── UNIQUE SITUATION CTA ── */}
-      <section className="py-14 bg-slate-800 text-center border-t border-white/10">
-        <div className="max-w-2xl mx-auto px-4">
-          <h3 className="text-2xl md:text-3xl font-serif font-black uppercase tracking-tighter text-white mb-3">
-            Have a unique situation?
-          </h3>
-          <p className="text-slate-300 font-medium text-base mb-8">
-            Every homeowner's journey is different. If you don't see your specific case here, don't worry — we've seen it all and we're here to help.
-          </p>
-          <a
-            href="#hero"
-            onClick={(e) => { e.preventDefault(); document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" }); }}
-            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-colors duration-300"
-          >
-            Get Your Fair Offer
-          </a>
-        </div>
-      </section>
-
-      {/* REVIEWS SECTION - Fondo suave y párrafos consolidados */}
+      {/* REVIEWS SECTION */}
       <section id="reviews" className="py-24 bg-[#f8fffc]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-20 max-w-2xl mx-auto">
