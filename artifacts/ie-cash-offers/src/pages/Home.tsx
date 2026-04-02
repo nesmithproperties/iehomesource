@@ -123,7 +123,7 @@ export default function Home() {
             Expert Home Buyers in <span className="text-cyan-600">The Inland Empire</span>
           </h2>
 
-          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-12 max-w-3xl">
+          <p className="text-lg text-slate-600 leading-relaxed font-medium max-w-3xl">
             Since 2004, our family-owned business has provided nearly 20 years of experience offering fast cash solutions for
             homeowners across California. As trusted local direct buyers based in the Inland Empire, we pride ourselves on
             maintaining high ethical standards with a process that features{" "}
@@ -133,51 +133,6 @@ export default function Home() {
             <span className="text-cyan-600 font-bold">fair and honest price</span>{" "}
             for your property today.
           </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {[
-              {
-                icon: Star,
-                title: "Family-Owned Since 2004",
-                text: "Nearly 20 years of experience helping California homeowners sell fast. We're not a corporation — we're a family business built on relationships and repeat referrals.",
-              },
-              {
-                icon: Users,
-                title: "No Call Centers. No Middlemen.",
-                text: "You speak directly with the decision-maker from your very first call. No scripts, no runaround — just real people who genuinely want to help you move on.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Buy Houses As-Is",
-                text: "Don't spend a dime on repairs, cleaning, or staging. We buy your home in exactly the condition it's in today — and we handle everything after closing.",
-              },
-              {
-                icon: DollarSign,
-                title: "Zero Realtor Commissions",
-                text: "No listing fees, no agent commissions, no closing cost surprises. The cash offer we make is what you walk away with — nothing deducted at the table.",
-              },
-              {
-                icon: BadgeCheck,
-                title: "High Ethical Standards",
-                text: "Our reputation in the Inland Empire is built on fairness and transparency. We'll never pressure you or make misleading promises — only clear, honest offers.",
-              },
-              {
-                icon: TrendingUp,
-                title: "Fair & Honest Price",
-                text: "Our offers are based on real local market data. We price fairly because we want you to feel good about the deal — not just today, but long after closing.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50 hover:border-cyan-200 hover:bg-cyan-50/30 transition-colors duration-300">
-                <div className="bg-cyan-100 rounded-xl p-2.5 flex-shrink-0">
-                  <item.icon className="h-5 w-5 text-cyan-600" />
-                </div>
-                <div>
-                  <p className="font-black uppercase tracking-widest text-xs text-slate-900 mb-1">{item.title}</p>
-                  <p className="text-slate-500 text-sm font-medium leading-relaxed">{item.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
