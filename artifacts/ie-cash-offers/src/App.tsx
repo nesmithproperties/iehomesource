@@ -13,7 +13,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      {cities.map((city) => (
+      {cities.map((city: { slug: string }) => (
         <Route key={city.slug} path={`/sell-my-house-fast-${city.slug}`}>
           {() => <SellMyHouseFast citySlug={city.slug} />}
         </Route>

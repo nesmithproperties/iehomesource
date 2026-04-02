@@ -13,12 +13,6 @@ type = "image"
 title = "distressed house needing repairs"
 
 [[generated]]
-id = "pWv3OZCTZGoOlNwtEyN5Q"
-uri = "file://artifacts/ie-cash-offers/src/assets/images/handshake.png"
-type = "image"
-title = "handshake over dining table"
-
-[[generated]]
 id = "HDD8TLQtLz0q_DHFlhL7g"
 uri = "file://artifacts/ie-cash-offers/src/assets/images/neighborhood.png"
 type = "image"
