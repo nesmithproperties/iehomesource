@@ -60,7 +60,7 @@ export default function Home() {
             <a href="#how-it-works" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Our Process</a>
             <a href="#faqs" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">FAQs</a>
             <a href="tel:6268930240" className="flex items-center gap-2 bg-cyan-600 text-white px-6 py-2.5 rounded-full font-black hover:shadow-xl transition-all">
-              <PhoneCall className="h-4 w-4" /> (909) 202-6006
+              <PhoneCall className="h-4 w-4" /> (626) 893-0240
             </a>
           </div>
         </div>
