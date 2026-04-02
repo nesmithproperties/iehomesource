@@ -279,7 +279,7 @@ export default function Home() {
                   ))}
                 </div>
 
-                {/* Texto consolidado con SEO */}
+                {/* Text SEO */}
                 <p className="text-lg text-slate-700 font-bold leading-relaxed mb-10 italic">
                   "{review.text}"
                 </p>
@@ -305,7 +305,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-black tracking-tighter mb-4 text-slate-900 uppercase">Frequently Asked Questions</h2>
-            <p className="text-slate-500 font-medium text-lg max-w-2xl mx-auto">Everything you need to know about selling your home to us — answered honestly.</p>
+            <p className="text-slate-500 font-medium text-lg max-w-2xl mx-auto">Everything you need to know about selling your home to us.</p>
           </div>
           <div className="space-y-5">
             {[
@@ -349,7 +349,7 @@ export default function Home() {
             <p className="text-slate-500 font-medium mb-8 max-w-xl mx-auto">Every homeowner's journey is different. If your question isn't answered here, we're always just a call or message away.</p>
             <a
               href="#hero"
-              onClick={(e) => { e.preventDefault(); document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" }); }}
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
               className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-colors duration-300"
             >
               Ask a Question
