@@ -123,32 +123,48 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
         </div>
       </section>
 
-      {/* ── EXPERT HOME BUYERS (Como en la Imagen 1) ── */}
+      {/* ── EXPERT HOME BUYERS ── */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 tracking-tighter text-slate-900 uppercase">
-            Expert Home Buyers in <span className="text-[#0891b2]">{name}</span>
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-serif font-black mb-6 tracking-tighter text-slate-900 uppercase">
+            Trusted Cash Home Buyers in <span className="text-[#0891b2]">{name}, CA</span>
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed font-medium">
-            Since 2004, our family-owned business has provided nearly 20 years of experience offering fast 
-            cash solutions for homeowners across California. As trusted local direct buyers based in the 
-            Inland Empire, we pride ourselves on maintaining high ethical standards with a process that 
-            features zero call centers and no impersonal middlemen. We buy houses as-is, allowing you to 
-            skip all repairs, deep cleaning, and costly realtor commissions through our transparent California 
-            fast home sale process, ensuring you receive a fair and honest price for your property today.
+          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10 max-w-3xl mx-auto">
+            Since 2016, Inland Empire Cash Offers has been helping California homeowners sell their houses fast — 
+            without the stress, delays, and fees of the traditional real estate market. As a locally owned and 
+            operated cash home buying company based right here in the Inland Empire, we buy houses as-is in {name} 
+            and throughout Southern California. No repairs. No commissions. No call centers. Just a fair, 
+            honest cash offer and a closing date that works for you — in as little as 7 days.
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <DollarSign className="h-8 w-8 text-[#0891b2] mb-3" />
+              <h4 className="font-black uppercase text-sm tracking-widest mb-2 text-slate-900">Fair Cash Offers</h4>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">Our offers are based on real local market data — not lowball algorithms. You'll always receive a fair and competitive price for your {name} home.</p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <ShieldCheck className="h-8 w-8 text-[#0891b2] mb-3" />
+              <h4 className="font-black uppercase text-sm tracking-widest mb-2 text-slate-900">Zero Hidden Fees</h4>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">There are no agent commissions, no closing cost surprises, and no last-minute deductions. The offer we make is the amount you receive at closing. Period.</p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <Award className="h-8 w-8 text-[#0891b2] mb-3" />
+              <h4 className="font-black uppercase text-sm tracking-widest mb-2 text-slate-900">Local Experts</h4>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">We're not a national hedge fund. We're a local Southern California team that actually lives and works in the communities we serve — including {name}.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ── SIMPLIFIED 3-STEP PROCESS (Como en la Imagen 1) ── */}
+      {/* ── SIMPLIFIED 3-STEP PROCESS ── */}
       <section className="py-20 bg-slate-50 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-black mb-4 tracking-tighter text-slate-900 uppercase">
-              Our Simplified 3-Step Process
+              How to Sell Your House Fast in {name}
             </h2>
-            <p className="text-slate-600 font-bold uppercase tracking-widest text-sm">
-              Selling a home doesn't have to be a nightmare. We've streamlined everything to be as simple as possible.
+            <p className="text-slate-600 font-bold uppercase tracking-widest text-sm max-w-2xl mx-auto">
+              Forget the months-long listing process. Our simple 3-step process gets you from contact to cash in as little as 7 days.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -156,56 +172,108 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
               <div className="w-16 h-16 bg-[#0891b2]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <PhoneCall className="h-8 w-8 text-[#0891b2]" />
               </div>
-              <h3 className="text-xl font-black uppercase mb-4">1. Contact Us</h3>
-              <p className="text-slate-600 text-sm font-medium">Call us or fill out the form. We'll discuss your property and situation immediately.</p>
+              <h3 className="text-xl font-black uppercase mb-4">1. Tell Us About Your Home</h3>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">Call us or fill out the quick form above. We'll ask a few simple questions about your {name} property and your situation — no obligation, no pressure.</p>
             </div>
             <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 text-center">
               <div className="w-16 h-16 bg-[#0891b2]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="h-8 w-8 text-[#0891b2]" />
               </div>
-              <h3 className="text-xl font-black uppercase mb-4">2. Get Your Offer</h3>
-              <p className="text-slate-600 text-sm font-medium">We'll present a fair, no-obligation cash offer based on local market conditions.</p>
+              <h3 className="text-xl font-black uppercase mb-4">2. Receive Your Cash Offer</h3>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">Within 24 hours, we'll present you with a fair, no-obligation cash offer based on current {name} market conditions. No repairs needed. No fees. No guessing.</p>
             </div>
             <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 text-center">
               <div className="w-16 h-16 bg-[#0891b2]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <ClipboardCheck className="h-8 w-8 text-[#0891b2]" />
               </div>
-              <h3 className="text-xl font-black uppercase mb-4">3. Close Fast</h3>
-              <p className="text-slate-600 text-sm font-medium">Pick your closing date. We handle the paperwork and you get paid in as little as 7 days.</p>
+              <h3 className="text-xl font-black uppercase mb-4">3. Close & Get Paid Fast</h3>
+              <p className="text-slate-600 text-sm font-medium leading-relaxed">You choose the closing date. We handle all the paperwork and escrow. You get your cash — in as little as 7 days, with zero stress and zero surprises.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SITUATIONS SECTION (Como en la Imagen 3) ── */}
+      {/* ── WHY CASH VS TRADITIONAL ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl md:text-5xl font-serif font-black mb-4 tracking-tighter text-slate-900 uppercase">
+              Cash Sale vs. Traditional Listing in {name}
+            </h2>
+            <p className="text-slate-500 font-medium text-base max-w-2xl mx-auto">
+              See why hundreds of California homeowners choose a direct cash sale over listing with a real estate agent.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-[#0891b2] text-white rounded-3xl p-10">
+              <h3 className="font-black uppercase text-lg tracking-widest mb-8 text-center">Inland Empire Cash Offers</h3>
+              {[
+                "Cash offer within 24 hours",
+                "Close in as little as 7 days",
+                "We pay ALL closing costs",
+                "Zero agent commissions or fees",
+                "No repairs, cleaning, or staging",
+                "No open houses or strangers in your home",
+                "No financing contingencies or deal fall-throughs",
+                "You choose your closing date",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3 mb-4">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0" />
+                  <span className="text-sm font-bold">{item}</span>
+                </div>
+              ))}
+            </div>
+            <div className="bg-slate-100 text-slate-700 rounded-3xl p-10">
+              <h3 className="font-black uppercase text-lg tracking-widest mb-8 text-center text-slate-900">Traditional Agent Listing</h3>
+              {[
+                "Weeks to months before your first offer",
+                "Average close time: 45–90 days in California",
+                "You pay 2–3% in closing costs",
+                "6% agent commission off your sale price",
+                "Repairs and staging often required",
+                "Multiple showings and open houses",
+                "Deals fall through due to financing issues",
+                "Closing date controlled by the buyer's lender",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3 mb-4">
+                  <Clock className="h-5 w-5 text-slate-400 flex-shrink-0" />
+                  <span className="text-sm font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SITUATIONS SECTION ── */}
       <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img src={image} className="w-full h-full object-cover grayscale" />
+          <img src={image} className="w-full h-full object-cover grayscale" alt={name} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-black mb-4 tracking-tighter uppercase">
-            We Buy Houses In Any Condition
+            We Buy {name} Homes In Any Situation
           </h2>
-          <p className="text-cyan-400 italic font-medium mb-16 text-lg">
-            "It doesn't matter why you need to sell, we have a solution for every situation."
+          <p className="text-cyan-400 italic font-medium mb-16 text-lg max-w-2xl mx-auto">
+            "No matter what you're going through, we have a fast and fair solution. You don't have to face it alone."
           </p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: AlertCircle, label: "Facing Foreclosure", sub: "Stop the auction process now." },
-              { icon: Building2, label: "Inherited Property", sub: "Simple probate solutions." },
-              { icon: Users, label: "Problem Tenants", sub: "We buy with renters in place." },
-              { icon: Scale, label: "Divorce Settlement", sub: "Quick and fair asset division." },
-              { icon: Plane, label: "Relocating Fast", sub: "Close on your timeline." },
-              { icon: Wrench, label: "Major Repairs Needed", sub: "Foundation, roof, or fire." },
-              { icon: Clock, label: "Behind On Taxes", sub: "Clear your debt instantly." },
-              { icon: Users2, label: "Vacant Properties", sub: "End the maintenance costs." },
+              { icon: AlertCircle, label: "Facing Foreclosure", sub: "Stop the bank auction. Protect your credit and walk away with cash." },
+              { icon: Building2, label: "Inherited Property", sub: "Skip the probate headaches. We buy inherited California homes as-is." },
+              { icon: Users, label: "Problem Tenants", sub: "We purchase rental properties with tenants in place — no eviction needed." },
+              { icon: Scale, label: "Divorce Settlement", sub: "Divide assets quickly and fairly. We close on your timeline." },
+              { icon: Plane, label: "Job Relocation", sub: "Don't let your home hold you back. We close fast so you can move forward." },
+              { icon: Wrench, label: "Major Repairs Needed", sub: "Foundation, roof, fire, mold — we buy it as-is, no repairs required." },
+              { icon: Clock, label: "Behind On Payments", sub: "Catch up before it's too late. A fast cash sale can clear your debt." },
+              { icon: Users2, label: "Vacant Properties", sub: "End the insurance costs, taxes, and liability. Sell fast for cash." },
             ].map((item, i) => (
               <div key={i} className="bg-slate-800/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col items-center gap-4 hover:border-[#0891b2] transition-all group">
                 <item.icon className="h-10 w-10 text-cyan-400 group-hover:scale-110 transition-transform" />
                 <div className="text-center">
-                  <p className="font-black uppercase tracking-widest text-xs mb-1">{item.label}</p>
-                  <p className="text-slate-400 text-[10px] font-medium leading-tight">{item.sub}</p>
+                  <p className="font-black uppercase tracking-widest text-xs mb-2">{item.label}</p>
+                  <p className="text-slate-400 text-[11px] font-medium leading-snug">{item.sub}</p>
                 </div>
               </div>
             ))}
