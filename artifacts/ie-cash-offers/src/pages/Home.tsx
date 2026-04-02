@@ -54,6 +54,7 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
             <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Home</Link>
+            <Link href="/cities" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Cities</Link>
             <a href="#why-us" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Why Choose Us</a>
             <a href="#how-it-works" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Our Process</a>
             <a href="#faqs" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">FAQs</a>

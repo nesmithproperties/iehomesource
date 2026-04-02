@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import SellMyHouseFast from "@/pages/SellMyHouseFast";
 import SituationsPage from "@/pages/SituationsPage";
+import CitiesPage from "@/pages/CitiesPage";
 import { cities } from "@/data/cityData";
 
 const queryClient = new QueryClient();
@@ -15,6 +16,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/we-buy-houses-any-condition-california" component={SituationsPage} />
+      <Route path="/cities" component={CitiesPage} />
       {cities.map((city: { slug: string }) => (
         <Route key={city.slug} path={`/sell-my-house-fast-${city.slug}`}>
           {() => <SellMyHouseFast citySlug={city.slug} />}
