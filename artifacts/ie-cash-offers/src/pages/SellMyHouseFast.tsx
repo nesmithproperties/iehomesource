@@ -130,7 +130,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             Trusted Cash Home Buyers in <span className="text-[#0891b2]">{name}, CA</span>
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10 max-w-3xl mx-auto">
-            Since 2016, Inland Empire Cash Offers has been helping California homeowners sell their houses fast — 
+            Since 2004, Inland Empire Cash Offers has been helping California homeowners sell their houses fast — 
             without the stress, delays, and fees of the traditional real estate market. As a locally owned and 
             operated cash home buying company based right here in the Inland Empire, we buy houses as-is in {name} 
             and throughout Southern California. No repairs. No commissions. No call centers. Just a fair, 

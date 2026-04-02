@@ -266,7 +266,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Sell Fast Inland Empire</span>
           </div>
           <p className="text-slate-400 font-bold text-sm uppercase tracking-[0.3em] mb-8">
-            Serving San Bernardino & Riverside Counties Since 2016
+            Serving San Bernardino & Riverside Counties Since 2004
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mb-16 border-y border-white/5 py-12">
             <div>
