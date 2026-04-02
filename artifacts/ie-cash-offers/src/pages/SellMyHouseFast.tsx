@@ -260,22 +260,27 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: AlertCircle, label: "Facing Foreclosure", sub: "Stop the bank auction. Protect your credit and walk away with cash." },
-              { icon: Building2, label: "Inherited Property", sub: "Skip the probate headaches. We buy inherited California homes as-is." },
-              { icon: Users, label: "Problem Tenants", sub: "We purchase rental properties with tenants in place — no eviction needed." },
-              { icon: Scale, label: "Divorce Settlement", sub: "Divide assets quickly and fairly. We close on your timeline." },
-              { icon: Plane, label: "Job Relocation", sub: "Don't let your home hold you back. We close fast so you can move forward." },
-              { icon: Wrench, label: "Major Repairs Needed", sub: "Foundation, roof, fire, mold — we buy it as-is, no repairs required." },
-              { icon: Clock, label: "Behind On Payments", sub: "Catch up before it's too late. A fast cash sale can clear your debt." },
-              { icon: Users2, label: "Vacant Properties", sub: "End the insurance costs, taxes, and liability. Sell fast for cash." },
+              { icon: AlertCircle, label: "Facing Foreclosure", sub: "Stop the bank auction. Protect your credit and walk away with cash.", anchor: "foreclosure" },
+              { icon: Building2, label: "Inherited Property", sub: "Skip the probate headaches. We buy inherited California homes as-is.", anchor: "inherited" },
+              { icon: Users, label: "Problem Tenants", sub: "We purchase rental properties with tenants in place — no eviction needed.", anchor: "tenants" },
+              { icon: Scale, label: "Divorce Settlement", sub: "Divide assets quickly and fairly. We close on your timeline.", anchor: "divorce" },
+              { icon: Plane, label: "Job Relocation", sub: "Don't let your home hold you back. We close fast so you can move forward.", anchor: "relocation" },
+              { icon: Wrench, label: "Major Repairs Needed", sub: "Foundation, roof, fire, mold — we buy it as-is, no repairs required.", anchor: "repairs" },
+              { icon: Clock, label: "Behind On Payments", sub: "Catch up before it's too late. A fast cash sale can clear your debt.", anchor: "payments" },
+              { icon: Users2, label: "Vacant Properties", sub: "End the insurance costs, taxes, and liability. Sell fast for cash.", anchor: "vacant" },
             ].map((item, i) => (
-              <div key={i} className="bg-slate-800/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col items-center gap-4 hover:border-[#0891b2] transition-all group">
+              <a
+                key={i}
+                href={`/we-buy-houses-any-condition-california#${item.anchor}`}
+                className="bg-slate-800/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 flex flex-col items-center gap-4 hover:border-[#0891b2] transition-all group cursor-pointer"
+              >
                 <item.icon className="h-10 w-10 text-cyan-400 group-hover:scale-110 transition-transform" />
                 <div className="text-center">
                   <p className="font-black uppercase tracking-widest text-xs mb-2">{item.label}</p>
                   <p className="text-slate-400 text-[11px] font-medium leading-snug">{item.sub}</p>
                 </div>
-              </div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#22d3ee] opacity-0 group-hover:opacity-100 transition-opacity">Learn More →</span>
+              </a>
             ))}
           </div>
         </div>

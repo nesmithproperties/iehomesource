@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import SellMyHouseFast from "@/pages/SellMyHouseFast";
+import SituationsPage from "@/pages/SituationsPage";
 import { cities } from "@/data/cityData";
 
 const queryClient = new QueryClient();
@@ -13,6 +14,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/we-buy-houses-any-condition-california" component={SituationsPage} />
       {cities.map((city: { slug: string }) => (
         <Route key={city.slug} path={`/sell-my-house-fast-${city.slug}`}>
           {() => <SellMyHouseFast citySlug={city.slug} />}
