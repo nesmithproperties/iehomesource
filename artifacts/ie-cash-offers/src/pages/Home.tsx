@@ -186,7 +186,12 @@ export default function Home() {
 
       {/* ── SITUATIONS SECTION (UPDATED) ── */}
       <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        {/* Simplified background - Removed image and gradients */}
+        <img
+          src={heroImg}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.07] pointer-events-none select-none"
+        />
         <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
             {/* Title - Set to full white for better contrast */}
@@ -199,7 +204,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { icon: AlertCircle, label: "Facing Foreclosure", d: "Stop the auction process now.", anchor: "foreclosure" },
               { icon: Building2, label: "Inherited Property", d: "Simple probate solutions.", anchor: "inherited" },
