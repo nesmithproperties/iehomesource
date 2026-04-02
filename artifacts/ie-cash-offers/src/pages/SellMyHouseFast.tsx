@@ -22,6 +22,7 @@ import {
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { cityMap, cities } from "@/data/cityData";
+import { getCityImage } from "@/data/cityImages";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -49,7 +50,8 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
     );
   }
 
-  const { name, county, tagline, intro, whyUs, highlights, image } = data;
+  const { name, county, tagline, intro, whyUs, highlights } = data;
+  const image = getCityImage(citySlug);
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
