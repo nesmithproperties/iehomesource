@@ -190,7 +190,7 @@ export default function Home() {
           src={heroImg}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.07] pointer-events-none select-none"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.1] pointer-events-none select-none"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -218,7 +218,7 @@ export default function Home() {
               <a
                 key={i}
                 href={`${import.meta.env.BASE_URL}we-buy-houses-any-condition-california#${item.anchor}`}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center gap-4 backdrop-blur-md group hover:bg-cyan-600 transition-all duration-300 cursor-pointer"
+                className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col items-center text-center gap-3 backdrop-blur-md group hover:bg-cyan-600 transition-all duration-300 cursor-pointer"
               >
                 <item.icon className="h-10 w-10 text-cyan-400 group-hover:text-white" />
                 <div>
@@ -236,22 +236,25 @@ export default function Home() {
             ))}
           </div>
 
-          {/* CTA below grid */}
-          <div className="mt-12 text-center">
-            <h3 className="text-2xl md:text-3xl font-serif font-black uppercase tracking-tighter text-white mb-3">
-              Have a unique situation?
-            </h3>
-            <p className="text-slate-300 font-medium text-base max-w-xl mx-auto mb-8">
-              Every homeowner's journey is different. If you don't see your specific case here, don't worry — we've seen it all and we're here to help.
-            </p>
-            <a
-              href="#hero"
-              onClick={(e) => { e.preventDefault(); document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" }); }}
-              className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-colors duration-300"
-            >
-              Get Your Fair Offer
-            </a>
-          </div>
+        </div>
+      </section>
+
+      {/* ── UNIQUE SITUATION CTA ── */}
+      <section className="py-14 bg-slate-800 text-center border-t border-white/10">
+        <div className="max-w-2xl mx-auto px-4">
+          <h3 className="text-2xl md:text-3xl font-serif font-black uppercase tracking-tighter text-white mb-3">
+            Have a unique situation?
+          </h3>
+          <p className="text-slate-300 font-medium text-base mb-8">
+            Every homeowner's journey is different. If you don't see your specific case here, don't worry — we've seen it all and we're here to help.
+          </p>
+          <a
+            href="#hero"
+            onClick={(e) => { e.preventDefault(); document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-colors duration-300"
+          >
+            Get Your Fair Offer
+          </a>
         </div>
       </section>
 
