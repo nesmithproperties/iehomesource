@@ -113,20 +113,71 @@ export default function Home() {
 
       {/* ── WHY TRUST US ── */}
       <section id="why-us" className="py-24 bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4">
 
-          {/* TRUST TAG - DESIGN BASED ON REFERENCE */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#e1f9fe] border border-[#d6f6fd] text-[#00a8cc] text-[11px] font-black uppercase tracking-[0.05em] mb-8">
             <BadgeCheck className="h-3.5 w-3.5" /> Trusted by over 300 families
           </div>
 
-          <h2 className="text-4xl font-serif font-black mb-8 text-slate-900 uppercase tracking-tighter">
+          <h2 className="text-4xl font-serif font-black mb-6 text-slate-900 uppercase tracking-tighter">
             Expert Home Buyers in <span className="text-cyan-600">The Inland Empire</span>
           </h2>
 
-          <p className="text-lg text-slate-700 leading-relaxed font-bold">
-            Since 2004, our family-owned business has provided nearly 20 years of experience offering fast cash solutions for homeowners across California. As trusted local direct buyers based in the Inland Empire, we pride ourselves on maintaining high ethical standards with a process that features zero call centers and no impersonal middlemen. We buy houses as-is, allowing you to skip all repairs, deep cleaning, and costly realtor commissions through our transparent California fast home sale process, ensuring you receive a fair and honest price for your property today.
+          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-12 max-w-3xl">
+            Since 2004, our family-owned business has provided nearly 20 years of experience offering fast cash solutions for
+            homeowners across California. As trusted local direct buyers based in the Inland Empire, we pride ourselves on
+            maintaining high ethical standards with a process that features{" "}
+            <span className="text-cyan-600 font-bold">zero call centers and no impersonal middlemen.</span>{" "}
+            We buy houses as-is, allowing you to skip all repairs, deep cleaning, and costly realtor commissions through our
+            transparent California fast home sale process, ensuring you receive a{" "}
+            <span className="text-cyan-600 font-bold">fair and honest price</span>{" "}
+            for your property today.
           </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {[
+              {
+                icon: Star,
+                title: "Family-Owned Since 2004",
+                text: "Nearly 20 years of experience helping California homeowners sell fast. We're not a corporation — we're a family business built on relationships and repeat referrals.",
+              },
+              {
+                icon: Users,
+                title: "No Call Centers. No Middlemen.",
+                text: "You speak directly with the decision-maker from your very first call. No scripts, no runaround — just real people who genuinely want to help you move on.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Buy Houses As-Is",
+                text: "Don't spend a dime on repairs, cleaning, or staging. We buy your home in exactly the condition it's in today — and we handle everything after closing.",
+              },
+              {
+                icon: DollarSign,
+                title: "Zero Realtor Commissions",
+                text: "No listing fees, no agent commissions, no closing cost surprises. The cash offer we make is what you walk away with — nothing deducted at the table.",
+              },
+              {
+                icon: BadgeCheck,
+                title: "High Ethical Standards",
+                text: "Our reputation in the Inland Empire is built on fairness and transparency. We'll never pressure you or make misleading promises — only clear, honest offers.",
+              },
+              {
+                icon: TrendingUp,
+                title: "Fair & Honest Price",
+                text: "Our offers are based on real local market data. We price fairly because we want you to feel good about the deal — not just today, but long after closing.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50 hover:border-cyan-200 hover:bg-cyan-50/30 transition-colors duration-300">
+                <div className="bg-cyan-100 rounded-xl p-2.5 flex-shrink-0">
+                  <item.icon className="h-5 w-5 text-cyan-600" />
+                </div>
+                <div>
+                  <p className="font-black uppercase tracking-widest text-xs text-slate-900 mb-1">{item.title}</p>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed">{item.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -166,25 +217,6 @@ export default function Home() {
               <p className="text-slate-600 font-medium leading-relaxed text-sm">{item.desc}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ── EXPERT HOME BUYERS ── */}
-      <section className="py-16 bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-black mb-8 tracking-tighter text-slate-900 uppercase">
-            Expert Home Buyers in <span className="text-[#0891b2]">The Inland Empire</span>
-          </h2>
-          <p className="text-lg text-slate-600 leading-relaxed font-medium">
-            Since 2004, our family-owned business has provided nearly 20 years of experience offering fast cash solutions for
-            homeowners across California. As trusted local direct buyers based in the Inland Empire, we pride ourselves on
-            maintaining high ethical standards with a process that features{" "}
-            <span className="text-[#0891b2] font-bold">zero call centers and no impersonal middlemen.</span>{" "}
-            We buy houses as-is, allowing you to skip all repairs, deep cleaning, and costly realtor commissions through our
-            transparent California fast home sale process, ensuring you receive a{" "}
-            <span className="text-[#0891b2] font-bold">fair and honest price</span>{" "}
-            for your property today.
-          </p>
         </div>
       </section>
 
