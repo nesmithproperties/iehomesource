@@ -113,7 +113,7 @@ export default function Home() {
 
       {/* ── WHY TRUST US ── */}
       <section id="why-us" className="py-24 bg-white border-b border-slate-100">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-3xl mx-auto px-4 text-center">
 
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#e1f9fe] border border-[#d6f6fd] text-[#00a8cc] text-[11px] font-black uppercase tracking-[0.05em] mb-8">
             <BadgeCheck className="h-3.5 w-3.5" /> Trusted by over 300 families
@@ -123,7 +123,7 @@ export default function Home() {
             Expert Home Buyers in <span className="text-cyan-600">The Inland Empire</span>
           </h2>
 
-          <p className="text-lg text-slate-600 leading-relaxed font-medium max-w-3xl">
+          <p className="text-lg text-slate-600 leading-relaxed font-medium mb-6">
             Since 2004, our family-owned business has provided nearly 20 years of experience offering fast cash solutions for
             homeowners across California. As trusted local direct buyers based in the Inland Empire, we pride ourselves on
             maintaining high ethical standards with a process that features{" "}
@@ -132,6 +132,15 @@ export default function Home() {
             transparent California fast home sale process, ensuring you receive a{" "}
             <span className="text-cyan-600 font-bold">fair and honest price</span>{" "}
             for your property today.
+          </p>
+
+          <p className="text-lg text-slate-600 leading-relaxed font-medium">
+            What sets us apart is simple: we treat every homeowner the way we'd want to be treated ourselves. Whether you're
+            facing foreclosure, going through a divorce, dealing with an inherited property, or simply ready to move on without
+            the stress of a traditional listing, we have a solution tailored to your situation.{" "}
+            <span className="text-cyan-600 font-bold">We close on your timeline</span> — as fast as 7 days or as flexible as
+            you need — with no pressure, no hidden fees, and no obligation to accept our offer. Just an honest conversation
+            with a local team that has helped hundreds of California families move forward with confidence.
           </p>
         </div>
       </section>
