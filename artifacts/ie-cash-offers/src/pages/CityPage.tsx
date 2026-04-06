@@ -224,7 +224,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="lg:col-span-12 text-white text-center lg:text-left">
+            <motion.div initial="hidden" animate="visible" variants={fadeIn} className="lg:col-span-6 text-white text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#0891b2] text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-lg">
                 <MapPin className="h-3 w-3" /> {county}
               </div>
@@ -243,7 +243,17 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
                 ))}
               </div>
             </motion.div>
-
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="lg:col-span-6 w-full flex justify-center lg:justify-end">
+              <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-t-8 border-cyan-600 w-full max-w-[520px]">
+                <iframe
+                  src="https://podio.com/webforms/30692898/2604476"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  title="Get a Cash Offer"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
