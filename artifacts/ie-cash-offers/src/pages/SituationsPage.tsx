@@ -139,7 +139,7 @@ export default function SituationsPage() {
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
             <HomeIcon className="h-8 w-8 text-[#0891b2]" />
             <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
-              Sell Fast Inland Empire
+              Inland Empire Home Source
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
@@ -267,7 +267,7 @@ export default function SituationsPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
             <HomeIcon className="h-7 w-7 text-[#0891b2]" />
-            <span className="font-serif font-black text-xl tracking-tighter text-white uppercase">Sell Fast Inland Empire</span>
+            <span className="font-serif font-black text-xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
           </div>
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-10">
             {cities.map((city) => (
@@ -281,7 +281,7 @@ export default function SituationsPage() {
             ))}
           </div>
           <p className="text-slate-600 font-bold text-[10px] uppercase tracking-[0.3em]">
-            © {new Date().getFullYear()} Sell Fast Inland Empire • All Rights Reserved
+            © {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved
           </p>
         </div>
       </footer>

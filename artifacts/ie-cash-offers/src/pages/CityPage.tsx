@@ -201,7 +201,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <HomeIcon className="h-8 w-8 text-[#0891b2]" />
-            <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">Sell Fast Inland Empire</span>
+            <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">Inland Empire Home Source</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
             <Link href="/" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Home</Link>
@@ -262,7 +262,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-8 text-[#0891b2]">
             <HomeIcon className="h-8 w-8" />
-            <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Sell Fast Inland Empire</span>
+            <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
           </div>
           <p className="text-slate-400 font-bold text-sm uppercase tracking-[0.3em] mb-8">
             Serving San Bernardino & Riverside Counties Since 2004
@@ -288,11 +288,11 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
             </div>
             <div>
               <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Legal Disclaimer</h5>
-              <p className="text-slate-300 text-sm leading-relaxed font-medium italic">Sell Fast Inland Empire is a private real estate investment firm. We are not real estate agents or brokers. We buy properties directly from homeowners for cash.</p>
+              <p className="text-slate-300 text-sm leading-relaxed font-medium italic">Inland Empire Home Source is a private real estate investment firm. We are not real estate agents or brokers. We buy properties directly from homeowners for cash.</p>
             </div>
           </div>
           <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">
-            © {new Date().getFullYear()} Sell Fast Inland Empire • All Rights Reserved
+            © {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved
           </p>
         </div>
       </footer>

@@ -13,7 +13,7 @@ export default function CitiesPage() {
           <Link href="/" className="flex items-center gap-2">
             <HomeIcon className="h-8 w-8 text-cyan-600" />
             <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
-              Sell Fast Inland Empire
+              Inland Empire Home Source
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold">
@@ -88,10 +88,10 @@ export default function CitiesPage() {
       <footer className="bg-slate-950 text-white py-10 text-center border-t border-white/10">
         <Link href="/" className="flex items-center justify-center gap-2 mb-4 text-cyan-600">
           <HomeIcon className="h-6 w-6" />
-          <span className="font-serif font-black text-xl tracking-tighter text-white uppercase">Sell Fast Inland Empire</span>
+          <span className="font-serif font-black text-xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
         </Link>
         <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">
-          © {new Date().getFullYear()} Sell Fast Inland Empire • All Rights Reserved
+          © {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved
         </p>
       </footer>
 
