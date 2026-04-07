@@ -60,7 +60,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
       <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <HomeIcon className="h-8 w-8 text-[#0891b2]" />
+            <Building2 className="h-8 w-8 text-[#0891b2]" />
             <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
               Inland Empire Home Source
             </span>
@@ -267,7 +267,6 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
       <footer className="bg-slate-950 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-8 text-[#0891b2]">
-            <HomeIcon className="h-8 w-8" />
             <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-12">
