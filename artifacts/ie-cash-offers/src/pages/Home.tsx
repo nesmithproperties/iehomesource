@@ -6,7 +6,6 @@ import {
   CheckCircle2,
   Clock,
   DollarSign,
-  Home as HomeIcon,
   Key,
   MapPin,
   PhoneCall,
@@ -47,7 +46,7 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <HomeIcon className="h-8 w-8 text-cyan-600" />
+            <Building2 className="h-8 w-8 text-cyan-600" />
             <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
               Inland Empire Home Source
             </span>
@@ -366,7 +365,6 @@ export default function Home() {
       <footer className="bg-slate-950 text-white py-20 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-8 text-cyan-600">
-            <HomeIcon className="h-8 w-8" />
             <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mb-16 border-y border-white/5 py-12">

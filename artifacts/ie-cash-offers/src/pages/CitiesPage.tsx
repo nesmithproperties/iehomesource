@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Home as HomeIcon, PhoneCall, MapPin, ArrowRight } from "lucide-react";
+import { Building2, PhoneCall, MapPin, ArrowRight } from "lucide-react";
 import { cities } from "@/data/cityData";
 import { getCityImage } from "@/data/cityImages";
 
@@ -11,7 +11,7 @@ export default function CitiesPage() {
       <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <HomeIcon className="h-8 w-8 text-cyan-600" />
+            <Building2 className="h-8 w-8 text-cyan-600" />
             <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
               Inland Empire Home Source
             </span>
@@ -87,7 +87,6 @@ export default function CitiesPage() {
       {/* Footer strip */}
       <footer className="bg-slate-950 text-white py-10 text-center border-t border-white/10">
         <Link href="/" className="flex items-center justify-center gap-2 mb-4 text-cyan-600">
-          <HomeIcon className="h-6 w-6" />
           <span className="font-serif font-black text-xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
         </Link>
         <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">

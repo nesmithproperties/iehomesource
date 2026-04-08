@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   Clock,
   DollarSign,
-  Home as HomeIcon,
   MapPin,
   PhoneCall,
   Plane,
@@ -44,7 +43,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
   if (!data) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#f8fffc]">
-        <HomeIcon className="h-12 w-12 text-cyan-600 mb-4" />
+        <Building2 className="h-12 w-12 text-cyan-600 mb-4" />
         <h1 className="text-2xl font-black uppercase tracking-tighter">City Not Found</h1>
         <Link href="/" className="mt-4 text-cyan-600 font-bold hover:underline uppercase text-sm tracking-widest">Return Home</Link>
       </div>
@@ -60,7 +59,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
       <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <HomeIcon className="h-8 w-8 text-[#0891b2]" />
+            <Building2 className="h-8 w-8 text-[#0891b2]" />
             <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
               Inland Empire Home Source
             </span>
@@ -267,7 +266,6 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
       <footer className="bg-slate-950 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-8 text-[#0891b2]">
-            <HomeIcon className="h-8 w-8" />
             <span className="font-serif font-black text-2xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-12">
