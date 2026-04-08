@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp -R * /home/cwp97q3o5un7/public_html/web
+    - /bin/cp -R * /home/cwp97q3o5un7/public_html/
