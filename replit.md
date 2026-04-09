@@ -91,6 +91,57 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `artifacts/ie-cash-offers` — Flask Website (GoDaddy cPanel)
+
+**Inland Empire Home Source** — a Python 3.11 / Flask website built for deployment on GoDaddy cPanel shared hosting via Phusion Passenger.
+
+**NOT a pnpm/Node.js package** — this artifact is a standalone Python Flask app. It has no `package.json` and does not participate in the TypeScript/pnpm workspace.
+
+**Stack:**
+- Python 3.11 + Flask 3.x
+- Jinja2 templates (in `templates/`)
+- Tailwind CSS Play CDN (no build step)
+- Google Fonts: Playfair Display (serif headings)
+- Font Awesome 6 CDN (icons)
+- Contentful Python SDK (blog posts)
+- Phusion Passenger WSGI entry via `passenger_wsgi.py`
+
+**Key files:**
+- `app.py` — Flask app with all routes and hardcoded city/situations data
+- `passenger_wsgi.py` — GoDaddy cPanel entry point (`from app import app as application`)
+- `requirements.txt` — `flask`, `contentful`, `python-dotenv`
+- `.htaccess` — enables Phusion Passenger on GoDaddy
+- `.env` — Contentful credentials (Space ID + Access Token)
+- `templates/base.html` — shared layout with nav + footer
+- `templates/index.html` — home page with hero, why-us, process, situations, reviews, FAQs
+- `templates/cities.html` — city grid listing all 12 cities
+- `templates/sell_fast.html` — dynamic city page (`/sell-my-house-fast-<slug>`)
+- `templates/situations.html` — 8 home-selling situations
+- `templates/blog.html` — Contentful blog posts
+- `templates/contact.html` — contact page with FAQs and process steps
+- `templates/privacy.html` — privacy policy
+- `templates/404.html` — 404 error page
+- `static/css/style.css` — custom styles (font-serif, hero overlay, FAQ accordion)
+- `static/js/main.js` — FAQ accordion, mobile nav toggle, smooth scroll
+- `static/images/cities/` — 12 city images (copied from src/assets)
+
+**Routes:**
+- `/` → home
+- `/cities` → city grid
+- `/sell-my-house-fast-<slug>` → city page (12 cities)
+- `/we-buy-houses-any-condition-california` → situations page
+- `/blog` → Contentful blog
+- `/contact` → contact page
+- `/privacy-policy` → privacy policy
+
+**Contentful:** Space ID `brrcamjugrrm`, content type `pageBlogPost`, fields: title, slug, shortDescription, publishedDate, featuredImage
+
+**GoDaddy deployment:** Upload contents of `ie-cash-offers-godaddy.zip` (at project root) to `public_html`. Install dependencies via SSH: `pip install -r requirements.txt`.
+
+**Dev server:** `python app.py` (runs from `artifacts/ie-cash-offers/` directory, PORT from env)
+
+**Phone:** (909) 202-6006 | **Cities:** Riverside, San Bernardino, Fontana, Moreno Valley, Rancho Cucamonga, Ontario, Corona, Victorville, Murrieta, Temecula, Rialto, Hesperia
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.

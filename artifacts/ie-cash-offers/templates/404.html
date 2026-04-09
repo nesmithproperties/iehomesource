@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found | Inland Empire Home Source{% endblock %}
+
+{% block content %}
+<section class="min-h-screen flex items-center justify-center bg-slate-950 text-white px-4 pt-16">
+  <div class="text-center max-w-xl mx-auto">
+    <div class="text-8xl font-serif font-black text-cyan-600 mb-4">404</div>
+    <h1 class="text-4xl font-serif font-black uppercase tracking-tighter mb-6">Page Not Found</h1>
+    <p class="text-slate-400 font-medium mb-10 text-lg leading-relaxed">
+      Sorry, we couldn't find the page you were looking for. It may have moved or no longer exists.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="/" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-black px-8 py-4 rounded-full transition-colors">
+        <i class="fa-solid fa-house"></i> Go Home
+      </a>
+      <a href="tel:9092026006" class="inline-flex items-center gap-2 border border-white/20 hover:border-cyan-500 text-slate-300 hover:text-white font-black px-8 py-4 rounded-full transition-colors">
+        <i class="fa-solid fa-phone"></i> (909) 202-6006
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

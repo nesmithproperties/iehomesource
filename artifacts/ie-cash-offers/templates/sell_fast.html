@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Sell My House Fast in {{ city.name }}, CA | Inland Empire Home Source{% endblock %}
+{% block meta_description %}Sell your house fast for cash in {{ city.name }}, CA. No repairs, no fees, close in 7 days. Local cash home buyers serving {{ city.county }}. Call (909) 202-6006.{% endblock %}
+
+{% block content %}
+
+<!-- ── HERO ──────────────────────────────────────────────────────────────────── -->
+<section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img
+      src="{{ url_for('static', filename=city.image) }}"
+      alt="Sell my house fast in {{ city.name }}, CA"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+  </div>
+
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <!-- Left: Headline -->
+      <div class="lg:col-span-6 text-white text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-cyan-600 text-white text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-lg">
+          <i class="fa-solid fa-location-dot text-xs"></i> {{ city.name }}, CA &bull; {{ city.county }}
+        </div>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-black leading-[1.05] mb-6 tracking-tight drop-shadow-2xl">
+          {{ city.tagline }}
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed font-bold line-clamp-3">
+          {{ city.intro[:200] }}...
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
+          {% for item in city.highlights[:4] %}
+          <div class="flex items-center gap-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
+            <i class="fa-solid fa-circle-check text-cyan-400 flex-shrink-0 text-lg"></i>
+            <span class="text-xs font-black uppercase tracking-tight text-white/90">{{ item }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Right: Podio Form -->
+      <div class="lg:col-span-6 w-full flex justify-center lg:justify-end">
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden border-t-8 border-cyan-600 w-full max-w-[520px]">
+          <iframe
+            src="https://podio.com/webforms/30692898/2604476"
+            width="100%"
+            height="600"
+            frameborder="0"
+            title="Get a Cash Offer in {{ city.name }}"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3-STEP PROCESS ─────────────────────────────────────────────────────────── -->
+<section class="py-20 bg-slate-50 border-y border-slate-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-serif font-black mb-4 tracking-tighter text-slate-900 uppercase">
+        How to Sell Your House Fast in {{ city.name }}
+      </h2>
+      <p class="text-slate-600 font-bold uppercase tracking-widest text-sm max-w-2xl mx-auto">
+        Forget the months-long listing process. Our simple 3-step process gets you from contact to cash in as little as 7 days.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 text-center">
+        <div class="w-16 h-16 bg-cyan-600/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fa-solid fa-phone text-2xl text-cyan-600"></i>
+        </div>
+        <h3 class="text-xl font-black uppercase mb-4">1. Tell Us About Your Home</h3>
+        <p class="text-slate-600 text-sm font-medium leading-relaxed">Call us or fill out the quick form above. We'll ask a few simple questions about your {{ city.name }} property and your situation — no obligation, no pressure.</p>
+      </div>
+      <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 text-center">
+        <div class="w-16 h-16 bg-cyan-600/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fa-solid fa-dollar-sign text-2xl text-cyan-600"></i>
+        </div>
+        <h3 class="text-xl font-black uppercase mb-4">2. Receive a Cash Offer</h3>
+        <p class="text-slate-600 text-sm font-medium leading-relaxed">Within 24 hours, we'll present a fair, all-cash offer for your {{ city.name }} home. Our offers reflect real local market data — not lowball estimates from out-of-state algorithms.</p>
+      </div>
+      <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 text-center">
+        <div class="w-16 h-16 bg-cyan-600/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fa-solid fa-key text-2xl text-cyan-600"></i>
+        </div>
+        <h3 class="text-xl font-black uppercase mb-4">3. Choose Your Closing Date</h3>
+        <p class="text-slate-600 text-sm font-medium leading-relaxed">Once you accept, simply pick the date that works for you. We handle all the paperwork and closing costs — you just show up and collect your cash.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY US ──────────────────────────────────────────────────────────────────── -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-cyan-50 border border-cyan-100 text-cyan-700 text-[11px] font-black uppercase tracking-widest mb-6">
+          <i class="fa-solid fa-shield-halved text-xs"></i> Local. Trusted. Since 2004.
+        </div>
+        <h2 class="text-4xl font-serif font-black tracking-tighter text-slate-900 uppercase mb-6">
+          Why {{ city.name }} Homeowners Choose Us
+        </h2>
+        <p class="text-slate-600 font-medium leading-relaxed mb-8">{{ city.why_us }}</p>
+
+        <div class="space-y-3 mb-8">
+          {% for item in city.highlights %}
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-circle-check text-cyan-600 flex-shrink-0"></i>
+            <span class="text-slate-700 font-medium">{{ item }}</span>
+          </div>
+          {% endfor %}
+        </div>
+
+        <a href="tel:9092026006" class="inline-flex items-center gap-3 bg-cyan-600 hover:bg-cyan-700 text-white font-black px-8 py-4 rounded-full transition-colors">
+          <i class="fa-solid fa-phone"></i> Call Now: (909) 202-6006
+        </a>
+      </div>
+
+      <div class="bg-slate-900 text-white rounded-3xl p-10">
+        <h3 class="text-2xl font-serif font-black uppercase tracking-tighter mb-8 text-white">
+          {{ city.name }} Neighborhoods We Buy In
+        </h3>
+        <div class="space-y-3">
+          {% for neighborhood in city.neighborhoods %}
+          <div class="flex items-center gap-3 py-3 border-b border-white/10 last:border-0">
+            <i class="fa-solid fa-location-dot text-cyan-400 flex-shrink-0"></i>
+            <span class="font-medium text-slate-200">{{ neighborhood }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <p class="text-slate-400 text-sm">Don't see your neighborhood? <strong class="text-white">We still want to hear from you</strong> — we buy throughout all of {{ city.name }}.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FULL INTRO TEXT ────────────────────────────────────────────────────────── -->
+<section class="py-16 bg-slate-50">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-serif font-black tracking-tighter uppercase mb-6 text-slate-900">
+      Selling Your House in {{ city.name }}, California
+    </h2>
+    <p class="text-slate-600 text-lg leading-relaxed font-medium">{{ city.intro }}</p>
+  </div>
+</section>
+
+<!-- ── CTA ────────────────────────────────────────────────────────────────────── -->
+<section class="py-20 bg-slate-950 text-white text-center px-4">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-4xl font-serif font-black tracking-tighter uppercase mb-4">
+      Ready to Sell Your <span class="text-cyan-400">{{ city.name }} Home?</span>
+    </h2>
+    <p class="text-slate-400 font-medium mb-8">
+      Call us now or fill out the form above. No obligation — just a fast, honest conversation with a local {{ city.name }} cash buyer.
+    </p>
+    <a href="tel:9092026006" class="inline-flex items-center gap-3 bg-cyan-600 hover:bg-cyan-500 text-white text-lg font-black px-10 py-5 rounded-full transition-all shadow-2xl shadow-cyan-600/30">
+      <i class="fa-solid fa-phone"></i> (909) 202-6006
+    </a>
+    <p class="mt-4 text-slate-500 text-sm font-medium">Available 7 days a week &bull; No pressure &bull; No obligation</p>
+  </div>
+</section>
+
+<!-- ── OTHER CITIES ───────────────────────────────────────────────────────────── -->
+<section class="py-12 bg-white border-t border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 text-center mb-8">
+    <h3 class="text-lg font-black uppercase tracking-widest text-slate-500">Also Serving</h3>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-3">
+    {% for c in cities %}
+    {% if c.slug != city.slug %}
+    <a href="/sell-my-house-fast-{{ c.slug }}" class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-slate-600 text-sm font-black uppercase tracking-widest hover:bg-cyan-600 hover:text-white hover:border-cyan-500 transition-all">
+      {{ c.name }}
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

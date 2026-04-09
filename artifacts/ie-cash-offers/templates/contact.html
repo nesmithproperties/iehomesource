@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us | Inland Empire Home Source{% endblock %}
+{% block meta_description %}Contact Inland Empire Home Source to get a fast cash offer for your home. Call (909) 202-6006 — available 7 days a week. No pressure, no obligation.{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="pt-36 pb-16 bg-slate-950 text-white text-center px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-cyan-600/20 border border-cyan-500/30 text-cyan-400 text-[11px] font-black uppercase tracking-widest mb-6">
+      <i class="fa-solid fa-location-dot text-xs"></i> Inland Empire, California
+    </div>
+    <h1 class="text-5xl md:text-6xl font-serif font-black tracking-tighter mb-6 uppercase">
+      Contact <span class="text-cyan-400">Us</span>
+    </h1>
+    <p class="text-slate-300 text-lg font-medium leading-relaxed mb-10">
+      We're a local team — real people, real conversations. Call us or read below to understand exactly what happens when you reach out.
+    </p>
+    <a href="tel:9092026006" class="inline-flex items-center gap-3 bg-cyan-600 hover:bg-cyan-500 text-white text-xl font-black px-10 py-5 rounded-full transition-all shadow-2xl shadow-cyan-600/30">
+      <i class="fa-solid fa-phone text-xl"></i> (909) 202-6006
+    </a>
+    <p class="mt-4 text-slate-500 text-sm font-medium">Available 7 days a week &bull; No pressure &bull; No obligation</p>
+  </div>
+</section>
+
+<!-- What to Expect -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-14">
+      <h2 class="text-4xl md:text-5xl font-serif font-black tracking-tighter uppercase mb-4">
+        What Happens <span class="text-cyan-600">After You Call</span>
+      </h2>
+      <p class="text-slate-500 text-lg font-medium max-w-2xl mx-auto">
+        No surprises. Here's exactly what our process looks like from first contact to closing.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {% for step in [
+        {
+          "icon": "fa-phone",
+          "title": "You call or submit your info",
+          "desc": "Reach us at (909) 202-6006 or submit your address online. Our team is available 7 days a week.",
+          "num": 1
+        },
+        {
+          "icon": "fa-comments",
+          "title": "We have a brief conversation",
+          "desc": "We'll ask a few questions about the property and your situation — no pressure, no obligation.",
+          "num": 2
+        },
+        {
+          "icon": "fa-dollar-sign",
+          "title": "You receive a fair cash offer",
+          "desc": "Within 24 hours you'll have a clear, written offer. We'll explain exactly how we arrived at the number.",
+          "num": 3
+        },
+        {
+          "icon": "fa-calendar-check",
+          "title": "You choose the closing date",
+          "desc": "If you accept, pick any date that works for you. We handle the paperwork and all closing costs.",
+          "num": 4
+        }
+      ] %}
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 flex gap-5">
+        <div class="flex-shrink-0 w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center">
+          <i class="fa-solid {{ step.icon }} text-white text-lg"></i>
+        </div>
+        <div>
+          <div class="text-xs font-black text-cyan-600 uppercase tracking-widest mb-1">Step {{ step.num }}</div>
+          <h3 class="font-black text-slate-900 text-lg mb-2">{{ step.title }}</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">{{ step.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Promises -->
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-serif font-black tracking-tighter uppercase mb-10">
+      Our <span class="text-cyan-600">Commitment</span> to You
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      {% for item in [
+        {"icon": "fa-clock", "label": "Fast Response", "desc": "We call back within hours, not days."},
+        {"icon": "fa-circle-check", "label": "Zero Pressure", "desc": "Our offer is yours to accept or decline — no follow-up harassment."},
+        {"icon": "fa-dollar-sign", "label": "No Hidden Costs", "desc": "No fees, no commissions, no surprises at closing."}
+      ] %}
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-7 text-center">
+        <div class="w-12 h-12 bg-cyan-600/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid {{ item.icon }} text-xl text-cyan-600"></i>
+        </div>
+        <div class="font-black text-slate-900 mb-2">{{ item.label }}</div>
+        <p class="text-slate-500 text-sm">{{ item.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQs -->
+<section id="faqs" class="py-20 bg-slate-50">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-serif font-black tracking-tighter uppercase mb-4">
+        Frequently Asked <span class="text-cyan-600">Questions</span>
+      </h2>
+      <p class="text-slate-500 font-medium">Everything you need to know before you call.</p>
+    </div>
+    <div class="space-y-3">
+      {% for faq in [
+        {
+          "q": "How fast can I get a cash offer?",
+          "a": "We typically provide a no-obligation cash offer within 24 hours of our initial call. There's no pressure — take as much time as you need to decide."
+        },
+        {
+          "q": "Do I need to clean or repair anything before selling?",
+          "a": "Absolutely not. We buy houses in any condition — as-is. Whether the property needs major repairs, has been damaged, or is full of belongings, we handle all of it after closing."
+        },
+        {
+          "q": "Are there any fees or commissions?",
+          "a": "None. There are no agent commissions, no closing costs, and no hidden fees of any kind. The offer we make is the amount you walk away with."
+        },
+        {
+          "q": "How do you determine your offer price?",
+          "a": "We look at the current market value of your home, its condition, the local Inland Empire market, and comparable sales nearby. Our offers are fair, transparent, and we're happy to walk you through the math."
+        },
+        {
+          "q": "How quickly can we close?",
+          "a": "We can close in as little as 7 days if needed, or on any date that works for your situation. You pick the timeline — we work around you."
+        },
+        {
+          "q": "Will someone actually visit my home?",
+          "a": "Yes. After our initial call, we'll schedule a brief visit (usually 20–30 minutes) to see the property. This helps us confirm the offer and make sure everything is accurate."
+        },
+        {
+          "q": "Is this only for homes in terrible condition?",
+          "a": "Not at all. We buy all kinds of homes — move-in ready, outdated, damaged, inherited, vacant, or tenant-occupied. If you need a fast, certain sale, we can help."
+        },
+        {
+          "q": "Are you a real local company?",
+          "a": "Yes. Inland Empire Home Source is a locally owned, family-operated business based in the Inland Empire. We have been buying homes here since 2004 — we are not a national hedge fund or a tech company with no local presence."
+        }
+      ] %}
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full flex items-center justify-between p-5 bg-white hover:bg-slate-50 transition-colors text-left">
+          <span class="font-black text-slate-900 pr-4">{{ faq.q }}</span>
+          <i class="fa-solid fa-chevron-down faq-chevron text-cyan-600 flex-shrink-0 transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer px-5 pb-5 bg-white border-t border-slate-100">
+          <p class="text-slate-600 leading-relaxed pt-4">{{ faq.a }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-slate-950 text-white text-center px-4">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-4xl font-serif font-black tracking-tighter uppercase mb-4">
+      Ready to Get Your <span class="text-cyan-400">Cash Offer?</span>
+    </h2>
+    <p class="text-slate-400 font-medium mb-8">
+      Call us now — our team is standing by 7 days a week. The call is free, fast, and there is never any obligation.
+    </p>
+    <a href="tel:9092026006" class="inline-flex items-center gap-3 bg-cyan-600 hover:bg-cyan-500 text-white text-lg font-black px-10 py-5 rounded-full transition-all shadow-2xl shadow-cyan-600/30">
+      <i class="fa-solid fa-phone"></i> (909) 202-6006
+    </a>
+  </div>
+</section>
+
+{% endblock %}
