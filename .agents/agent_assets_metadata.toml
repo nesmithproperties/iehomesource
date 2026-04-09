@@ -29,3 +29,9 @@ id = "tbLG_nwMnCwwkMvuXKu6Y"
 uri = "file://ie-cash-offers-bluehost.tar.gz"
 type = "unspecified"
 title = "IE Cash Offers — Bluehost Files"
+
+[[outputs]]
+id = "NrgIBvqRHSLY269PE50N5"
+uri = "file://artifacts/ie-cash-offers/ie-cash-offers-godaddy.zip"
+type = "unspecified"
+title = "IE Cash Offers — GoDaddy Upload Package"
