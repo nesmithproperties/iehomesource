@@ -1,24 +1,24 @@
 import { Link, useLocation } from "wouter";
-import { Building2, PhoneCall } from "lucide-react";
+import { Building2 } from "lucide-react";
 
-const baseLinks = [
-  { href: "/cities", label: "Cities" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact Us" },
-];
-
-const homeOnlyLinks = [
-  { href: "#why-us", label: "Why Us", anchor: true },
-  { href: "#how-it-works", label: "Our Process", anchor: true },
-  { href: "#faqs", label: "FAQs", anchor: true },
+const links = [
+  { href: "/", label: "Home", isRouter: true },
+  { href: "/cities", label: "Cities", isRouter: true },
+  { href: "/#why-us", label: "Why Us", isRouter: false },
+  { href: "/#how-it-works", label: "Our Process", isRouter: false },
+  { href: "/#faqs", label: "FAQs", isRouter: false },
+  { href: "/blog", label: "Blog", isRouter: true },
+  { href: "/contact", label: "Contact Us", isRouter: true },
 ];
 
 export default function Nav() {
   const [location] = useLocation();
-  const isHome = location === "/";
 
-  const isActive = (href: string) =>
-    href === "/" ? isHome : location.startsWith(href);
+  const isActive = (href: string) => {
+    if (href === "/") return location === "/";
+    if (href.startsWith("/#")) return false;
+    return location.startsWith(href);
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
@@ -30,53 +30,29 @@ export default function Nav() {
           </span>
         </Link>
         <div className="hidden md:flex items-center gap-5 text-sm font-bold flex-shrink-0">
-          {!isHome && (
-            <Link
-              href="/"
-              className="uppercase tracking-widest transition-colors text-slate-600 hover:text-cyan-600"
-            >
-              Home
-            </Link>
+          {links.map(({ href, label, isRouter }) =>
+            isRouter ? (
+              <Link
+                key={href}
+                href={href}
+                className={`uppercase tracking-widest transition-colors ${
+                  isActive(href)
+                    ? "text-cyan-600"
+                    : "text-slate-600 hover:text-cyan-600"
+                }`}
+              >
+                {label}
+              </Link>
+            ) : (
+              <a
+                key={href}
+                href={href}
+                className="uppercase tracking-widest transition-colors text-slate-600 hover:text-cyan-600"
+              >
+                {label}
+              </a>
+            )
           )}
-          <Link
-            href="/cities"
-            className={`uppercase tracking-widest transition-colors ${
-              isActive("/cities") ? "text-cyan-600" : "text-slate-600 hover:text-cyan-600"
-            }`}
-          >
-            Cities
-          </Link>
-          {isHome && homeOnlyLinks.map(({ href, label }) => (
-            <a
-              key={href}
-              href={href}
-              className="uppercase tracking-widest transition-colors text-slate-600 hover:text-cyan-600"
-            >
-              {label}
-            </a>
-          ))}
-          <Link
-            href="/blog"
-            className={`uppercase tracking-widest transition-colors ${
-              isActive("/blog") ? "text-cyan-600" : "text-slate-600 hover:text-cyan-600"
-            }`}
-          >
-            Blog
-          </Link>
-          <Link
-            href="/contact"
-            className={`uppercase tracking-widest transition-colors ${
-              isActive("/contact") ? "text-cyan-600" : "text-slate-600 hover:text-cyan-600"
-            }`}
-          >
-            Contact Us
-          </Link>
-          <a
-            href="tel:9092026006"
-            className="flex items-center gap-2 bg-cyan-600 text-white px-5 py-2.5 rounded-full font-black hover:shadow-xl transition-all"
-          >
-            <PhoneCall className="h-4 w-4" /> (909) 202-6006
-          </a>
         </div>
       </div>
     </nav>
