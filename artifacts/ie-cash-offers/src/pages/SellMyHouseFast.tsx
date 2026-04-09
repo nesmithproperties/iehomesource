@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
+import Nav from "@/components/Nav";
 import { cityMap, cities } from "@/data/cityData";
 import { getCityImage } from "@/data/cityImages";
 
@@ -55,26 +56,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* ── NAVIGATION ── */}
-      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <Building2 className="h-8 w-8 text-[#0891b2]" />
-            <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
-              Inland Empire Home Source
-            </span>
-          </Link>
-          <div className="hidden md:flex items-center gap-5 text-sm font-bold">
-            <Link href="/" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Home</Link>
-            <Link href="/cities" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Cities</Link>
-            <Link href="/blog" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Blog</Link>
-            <Link href="/contact" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Contact Us</Link>
-            <a href="tel:9092026006" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
-              <PhoneCall className="h-4 w-4" /> (909) 202-6006
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* ── HERO SECTION ── */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
@@ -273,6 +255,11 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
                 {city.name}
               </Link>
             ))}
+          </div>
+          <div className="flex justify-center gap-6 text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
           <p className="text-slate-600 font-bold text-[10px] uppercase tracking-[0.3em]">
             © {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved

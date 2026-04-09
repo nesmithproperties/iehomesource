@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "wouter";
+import Nav from "@/components/Nav";
 import { cities } from "@/data/cityData";
 
 const heroImg = "https://media.california.com/media/_versions_webp/articles/california_inland_empire__4088x2725____v1800x750__.webp";
@@ -42,28 +43,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Building2 className="h-8 w-8 text-cyan-600" />
-            <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
-              Inland Empire Home Source
-            </span>
-          </div>
-          <div className="hidden md:flex items-center gap-5 text-sm font-bold">
-            <Link href="/cities" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Cities</Link>
-            <a href="#why-us" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Why Us</a>
-            <a href="#how-it-works" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Our Process</a>
-            <a href="#faqs" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">FAQs</a>
-            <Link href="/blog" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Blog</Link>
-            <Link href="/contact" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Contact Us</Link>
-            <a href="tel:9092026006" className="flex items-center gap-2 bg-cyan-600 text-white px-5 py-2.5 rounded-full font-black hover:shadow-xl transition-all">
-              <PhoneCall className="h-4 w-4" /> (909) 202-6006
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen lg:min-h-[95vh] flex items-center pt-24 pb-16 overflow-hidden">
@@ -385,6 +365,11 @@ export default function Home() {
               <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Legal Disclaimer</h5>
               <p className="text-slate-300 text-sm leading-relaxed font-medium italic">Inland Empire Home Source is a private real estate investment firm. We are not real estate agents or brokers.</p>
             </div>
+          </div>
+          <div className="flex justify-center gap-6 text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
           <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">© {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved</p>
         </div>

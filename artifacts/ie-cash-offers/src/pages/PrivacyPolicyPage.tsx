@@ -1,5 +1,7 @@
 import { Link } from "wouter";
-import { Building2, PhoneCall, ShieldCheck } from "lucide-react";
+import { PhoneCall, ShieldCheck } from "lucide-react";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export default function PrivacyPolicyPage() {
   const updated = "April 1, 2025";
@@ -7,26 +9,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
 
-      {/* Nav */}
-      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Building2 className="h-8 w-8 text-cyan-600" />
-            <span className="font-serif font-black text-2xl tracking-tighter text-slate-900 uppercase">
-              Inland Empire Home Source
-            </span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-bold">
-            <Link href="/" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Home</Link>
-            <Link href="/cities" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Cities</Link>
-            <Link href="/blog" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Blog</Link>
-            <Link href="/contact" className="text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Contact Us</Link>
-            <a href="tel:9092026006" className="flex items-center gap-2 bg-cyan-600 text-white px-6 py-2.5 rounded-full font-black hover:shadow-xl transition-all">
-              <PhoneCall className="h-4 w-4" /> (909) 202-6006
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* Header */}
       <section className="pt-36 pb-12 bg-slate-950 text-white text-center px-4">
@@ -152,19 +135,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 text-white py-10 text-center border-t border-white/10">
-        <Link href="/" className="flex items-center justify-center gap-2 mb-4">
-          <span className="font-serif font-black text-xl tracking-tighter text-white uppercase">Inland Empire Home Source</span>
-        </Link>
-        <div className="flex justify-center gap-6 text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">
-          <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-        </div>
-        <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">
-          © {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved
-        </p>
-      </footer>
+      <Footer />
 
     </div>
   );
