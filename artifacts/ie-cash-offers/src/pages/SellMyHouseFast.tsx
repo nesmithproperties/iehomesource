@@ -64,14 +64,13 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
               Inland Empire Home Source
             </span>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-bold">
+          <div className="hidden md:flex items-center gap-5 text-sm font-bold">
             <Link href="/" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Home</Link>
             <Link href="/cities" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Cities</Link>
-            <Link href="/#why-us" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Why Choose Us</Link>
-            <Link href="/#how-it-works" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Our Process</Link>
-            <Link href="/#faqs" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">FAQs</Link>
+            <Link href="/blog" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Blog</Link>
+            <Link href="/contact" className="text-slate-600 hover:text-[#0891b2] transition-colors uppercase tracking-widest">Contact Us</Link>
             <a href="tel:9092026006" className="flex items-center gap-2 bg-[#0891b2] text-white px-6 py-2.5 rounded-full font-black hover:bg-[#0e7490] transition-all shadow-lg shadow-cyan-600/20">
-              <PhoneCall className="h-4 w-4" /> (902) 202-6006
+              <PhoneCall className="h-4 w-4" /> (909) 202-6006
             </a>
           </div>
         </div>

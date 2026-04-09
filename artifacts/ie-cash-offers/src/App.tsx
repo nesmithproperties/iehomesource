@@ -7,6 +7,9 @@ import Home from "@/pages/Home";
 import SellMyHouseFast from "@/pages/SellMyHouseFast";
 import SituationsPage from "@/pages/SituationsPage";
 import CitiesPage from "@/pages/CitiesPage";
+import ContactPage from "@/pages/ContactPage";
+import BlogPage from "@/pages/BlogPage";
+import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage";
 import { cities } from "@/data/cityData";
 
 const queryClient = new QueryClient();
@@ -17,6 +20,9 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/we-buy-houses-any-condition-california" component={SituationsPage} />
       <Route path="/cities" component={CitiesPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/blog" component={BlogPage} />
+      <Route path="/privacy-policy" component={PrivacyPolicyPage} />
       {cities.map((city: { slug: string }) => (
         <Route key={city.slug} path={`/sell-my-house-fast-${city.slug}`}>
           {() => <SellMyHouseFast citySlug={city.slug} />}
