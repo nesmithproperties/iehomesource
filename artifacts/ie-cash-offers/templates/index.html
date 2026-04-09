@@ -268,19 +268,4 @@
   </div>
 </section>
 
-<!-- ── CITY STRIP ─────────────────────────────────────────────────────────────── -->
-<section class="py-16 bg-slate-950 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-4 text-center mb-10">
-    <h2 class="text-2xl font-serif font-black uppercase tracking-tighter text-white mb-2">We Serve the Entire Inland Empire</h2>
-    <p class="text-slate-400 text-sm font-medium">Click your city to see local info and get a cash offer.</p>
-  </div>
-  <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-3">
-    {% for city in cities %}
-    <a href="/sell-my-house-fast-{{ city.slug }}" class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-slate-300 text-sm font-black uppercase tracking-widest hover:bg-cyan-600 hover:text-white hover:border-cyan-500 transition-all">
-      {{ city.name }}
-    </a>
-    {% endfor %}
-  </div>
-</section>
-
 {% endblock %}

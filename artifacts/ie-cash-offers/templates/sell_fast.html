@@ -167,20 +167,4 @@
   </div>
 </section>
 
-<!-- ── OTHER CITIES ───────────────────────────────────────────────────────────── -->
-<section class="py-12 bg-white border-t border-slate-100">
-  <div class="max-w-7xl mx-auto px-4 text-center mb-8">
-    <h3 class="text-lg font-black uppercase tracking-widest text-slate-500">Also Serving</h3>
-  </div>
-  <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-3">
-    {% for c in cities %}
-    {% if c.slug != city.slug %}
-    <a href="/sell-my-house-fast-{{ c.slug }}" class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-slate-600 text-sm font-black uppercase tracking-widest hover:bg-cyan-600 hover:text-white hover:border-cyan-500 transition-all">
-      {{ c.name }}
-    </a>
-    {% endif %}
-    {% endfor %}
-  </div>
-</section>
-
 {% endblock %}

@@ -1,10 +1,16 @@
 import os
+from datetime import datetime
 from flask import Flask, render_template, abort, request
 from dotenv import load_dotenv
 
 load_dotenv()
 
 app = Flask(__name__)
+
+
+@app.context_processor
+def inject_year():
+    return {"current_year": datetime.now().year}
 
 # ── City data ────────────────────────────────────────────────────────────────
 

@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cwp97q3o5un7/public_html
+    - /bin/cp -R artifacts/ie-cash-offers/app.py $DEPLOYPATH/
+    - /bin/cp -R artifacts/ie-cash-offers/passenger_wsgi.py $DEPLOYPATH/
+    - /bin/cp -R artifacts/ie-cash-offers/requirements.txt $DEPLOYPATH/
+    - /bin/cp -R artifacts/ie-cash-offers/.htaccess $DEPLOYPATH/
+    - /bin/cp -R artifacts/ie-cash-offers/templates $DEPLOYPATH/
+    - /bin/cp -R artifacts/ie-cash-offers/static $DEPLOYPATH/
