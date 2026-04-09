@@ -27,3 +27,9 @@ timeoutMs = 20000
 
 [nix]
 packages = ["zip"]
+
+[userenv]
+
+[userenv.shared]
+VITE_CONTENTFUL_SPACE_ID = "brrcamjugrrm"
+VITE_CONTENTFUL_ACCESS_TOKEN = "l44QiGlGckyp2NhXeSfPjd_C71kZAyrsf7Hov9PuSSc"
