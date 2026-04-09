@@ -364,12 +364,8 @@ export default function Home() {
             <div>
               <h5 className="font-black uppercase text-xs tracking-widest text-white mb-4">Legal Disclaimer</h5>
               <p className="text-slate-300 text-sm leading-relaxed font-medium italic">Inland Empire Home Source is a private real estate investment firm. We are not real estate agents or brokers.</p>
+              <Link href="/privacy-policy" className="inline-block mt-3 text-slate-400 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors">Privacy Policy →</Link>
             </div>
-          </div>
-          <div className="flex justify-center gap-6 text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
           <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">© {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved</p>
         </div>

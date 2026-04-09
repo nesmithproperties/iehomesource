@@ -256,11 +256,7 @@ export default function CityPage({ citySlug }: { citySlug: string }) {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center gap-6 text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-          </div>
+          <Link href="/privacy-policy" className="inline-block mb-6 text-slate-500 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors">Privacy Policy</Link>
           <p className="text-slate-600 font-bold text-[10px] uppercase tracking-[0.3em]">
             © {new Date().getFullYear()} Inland Empire Home Source • All Rights Reserved
           </p>
