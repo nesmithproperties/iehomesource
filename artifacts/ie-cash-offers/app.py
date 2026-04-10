@@ -302,10 +302,9 @@ def blog():
                     if url:
                         image_url = f"https:{url}" if url.startswith("//") else url
                 posts.append({
-                    "title": f.get("title") or f.get("internal_name") or "Untitled",
-                    "slug": f.get("slug") or entry.sys["id"],
-                    "excerpt": f.get("short_description") or "",
-                    "published_date": str(f.get("published_date") or "")[:10],
+                    "title": f.get("Title") or f.get("internal_name") or "Untitled",
+                    "slug": f.get("Slug") or entry.sys["id"],
+                    "excerpt": f.get("Short_description") or "",
                     "image_url": image_url,
                 })
         except Exception as e:
