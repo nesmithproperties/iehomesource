@@ -288,14 +288,14 @@ def blog():
             import contentful
             client = contentful.Client(space_id, access_token)
             entries = client.entries({
-                "content_type": "pageBlogPost",
+                "content_type": "blogPage",
                 "include": 2,
-                "order": "-fields.publishedDate",
+                "order": "-sys.createdAt",
             })
             for entry in entries:
                 f = entry.fields()
                 image_url = None
-                featured = f.get("featured_image")
+                featured = f.get("featuredImage")
                 if featured and hasattr(featured, "fields"):
                     file_obj = featured.fields().get("file", {})
                     url = file_obj.get("url", "") if isinstance(file_obj, dict) else getattr(file_obj, "url", "")
