@@ -280,31 +280,32 @@ def situations():
 def blog():
     posts = []
     error = None
-    space_id = os.environ.get("CONTENTFUL_SPACE_ID")
-    access_token = os.environ.get("CONTENTFUL_ACCESS_TOKEN")
+    space_id = os.environ.get("CONTENTFUL_SPACE_ID", "")
+    access_token = os.environ.get("CONTENTFUL_ACCESS_TOKEN", "")
 
     if space_id and access_token:
         try:
             import contentful
             client = contentful.Client(space_id, access_token)
             entries = client.entries({
-                "content_type": "blogPage",
+                "content_type": "pageBlogPost",
                 "include": 2,
-                "order": "-sys.createdAt",
+                "order": "-fields.publishedDate",
             })
             for entry in entries:
                 f = entry.fields()
                 image_url = None
-                featured = f.get("featuredImage")
+                featured = f.get("featured_image")
                 if featured and hasattr(featured, "fields"):
                     file_obj = featured.fields().get("file", {})
                     url = file_obj.get("url", "") if isinstance(file_obj, dict) else getattr(file_obj, "url", "")
                     if url:
                         image_url = f"https:{url}" if url.startswith("//") else url
                 posts.append({
-                    "title": f.get("Title") or f.get("internal_name") or "Untitled",
-                    "slug": f.get("Slug") or entry.sys["id"],
-                    "excerpt": f.get("Short_description") or "",
+                    "title": f.get("title") or f.get("internal_name") or "Untitled",
+                    "slug": f.get("slug") or entry.sys["id"],
+                    "excerpt": f.get("short_description") or "",
+                    "published_date": str(f.get("published_date") or "")[:10],
                     "image_url": image_url,
                 })
         except Exception as e:
@@ -312,7 +313,7 @@ def blog():
     else:
         error = "Contentful credentials not configured."
 
-    return f"Error detectado: {error}" if error else render_template("blog.html", posts=posts)
+    return render_template("blog.html", posts=posts, error=error, cities=CITIES, active="blog")
 
 
 @app.route("/contact")
