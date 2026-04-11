@@ -312,7 +312,7 @@ def blog():
     else:
         error = "Contentful credentials not configured."
 
-    return render_template("blog.html", posts=posts, error=error, cities=CITIES, active="blog")
+    return f"Error detectado: {error}" if error else render_template("blog.html", posts=posts)
 
 
 @app.route("/contact")
