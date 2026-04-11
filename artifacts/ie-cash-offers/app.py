@@ -280,8 +280,8 @@ def situations():
 def blog():
     posts = []
     error = None
-    space_id = "3gcwic6lwz4p"
-    access_token = "JxddMgxR45dnXVVocXcbdFUEnYnM8DVvGn2BkDtnhCc"
+    space_id = os.environ.get("CONTENTFUL_SPACE_ID")
+    access_token = os.environ.get("CONTENTFUL_ACCESS_TOKEN")
 
     if space_id and access_token:
         try:
