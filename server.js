@@ -148,6 +148,7 @@ app.get('/blog', async (req, res) => {
 
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
   console.log('Space ID exists:', !!spaceId, 'Token exists:', !!accessToken);
+  const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
 
   if (spaceId && accessToken) {
     try {
