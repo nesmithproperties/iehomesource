@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Blog | Inland Empire Home Source{% endblock %}
+{% block meta_description %}Read our latest articles about selling your house fast in the Inland Empire, CA. Tips, advice, and local real estate insights from Inland Empire Home Source.{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="pt-36 pb-16 bg-slate-950 text-white text-center px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-cyan-600/20 border border-cyan-500/30 text-cyan-400 text-[11px] font-black uppercase tracking-widest mb-6">
+      <i class="fa-solid fa-newspaper text-xs"></i> Inland Empire Real Estate
+    </div>
+    <h1 class="text-5xl md:text-6xl font-serif font-black tracking-tighter mb-6 uppercase">
+      Our <span class="text-cyan-400">Blog</span>
+    </h1>
+    <p class="text-slate-300 text-lg font-medium leading-relaxed">
+      Tips, advice, and insights for Inland Empire homeowners looking to sell fast.
+    </p>
+  </div>
+</section>
+
+<!-- Posts -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+
+    {% if error %}
+    <div class="text-center py-20">
+      <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fa-solid fa-triangle-exclamation text-slate-400 text-2xl"></i>
+      </div>
+      <h2 class="text-2xl font-black text-slate-700 uppercase tracking-tighter mb-3">Blog Temporarily Unavailable</h2>
+      <p class="text-slate-500 font-medium mb-8 max-w-md mx-auto">We're having trouble loading our blog posts right now. Please call us directly — we're happy to answer any questions.</p>
+      <a href="tel:9092026006" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-black px-8 py-4 rounded-full transition-colors">
+        <i class="fa-solid fa-phone"></i> (909) 202-6006
+      </a>
+    </div>
+
+    {% elif posts %}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for post in posts %}
+      <article class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all overflow-hidden group">
+        {% if post.image_url %}
+        <div class="relative h-52 overflow-hidden">
+          <img src="{{ post.image_url }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        {% else %}
+        <div class="h-52 bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center">
+          <i class="fa-solid fa-house text-4xl text-cyan-600/40"></i>
+        </div>
+        {% endif %}
+        <div class="p-6">
+          {% if post.published_date %}
+          <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-3">
+            <i class="fa-regular fa-calendar mr-1"></i>{{ post.published_date }}
+          </p>
+          {% endif %}
+          <h2 class="text-xl font-black text-slate-900 mb-3 leading-tight group-hover:text-cyan-600 transition-colors">{{ post.title }}</h2>
+          {% if post.excerpt %}
+          <p class="text-slate-500 text-sm font-medium leading-relaxed line-clamp-3">{{ post.excerpt }}</p>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <div class="text-center py-20">
+      <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fa-solid fa-pen-nib text-slate-400 text-2xl"></i>
+      </div>
+      <h2 class="text-2xl font-black text-slate-700 uppercase tracking-tighter mb-3">No Posts Yet</h2>
+      <p class="text-slate-500 font-medium mb-8">Check back soon — we're preparing content specifically for Inland Empire homeowners.</p>
+      <a href="/" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-black px-8 py-4 rounded-full transition-colors">
+        <i class="fa-solid fa-house"></i> Back to Home
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-slate-950 text-white text-center px-4">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-4xl font-serif font-black tracking-tighter uppercase mb-4">
+      Ready to Sell? <span class="text-cyan-400">Call Us Today.</span>
+    </h2>
+    <p class="text-slate-400 font-medium mb-8">
+      No waiting, no listings — just a fast, fair cash offer for your Inland Empire home.
+    </p>
+    <a href="tel:9092026006" class="inline-flex items-center gap-3 bg-cyan-600 hover:bg-cyan-500 text-white text-lg font-black px-10 py-5 rounded-full transition-all shadow-2xl shadow-cyan-600/30">
+      <i class="fa-solid fa-phone"></i> (909) 202-6006
+    </a>
+  </div>
+</section>
+
+{% endblock %}
