@@ -1,12 +1,3 @@
-const express = require('express');
-const path = require('path');
-const ejs = require('ejs'); 
-const app = express();
-const port = process.env.PORT || 3000;
-
-// Configure delimiters for Python-style tags
-ejs.delimiter = '%'; 
-ejs.openDelimiter = '{';
 ejs.closeDelimiter = '}';
 
 app.set('view engine', 'html');
