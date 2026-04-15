@@ -147,7 +147,10 @@ app.get('/blog', async (req, res) => {
   let error = null;
 
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
-  const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;  
+  const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
+  console.log('Space ID:', spaceId);
+console.log('Token length:', accessToken ? accessToken.length : 0);
+console.log('Token starts with:', accessToken ? accessToken.substring(0, 10) + '...' : 'undefined')
 
   if (spaceId && accessToken) {
     try {
