@@ -184,9 +184,11 @@ console.log('Token starts with:', accessToken ? accessToken.substring(0, 10) + '
           image_url: imageUrl
         };
       });
-    } catch (e) {
-      error = e.message;
-    }
+} catch (e) {
+  error = e.message;
+  console.log('Contentful error:', e.message);
+  console.log('Full error:', e);
+}
   } else {
     error = 'Contentful credentials not configured.';
   }
