@@ -1,0 +1,9 @@
+# Hostinger Node.js Web App - .htaccess (optional)
+# This file is typically not needed for Node.js Web Apps on Hostinger
+# as they handle routing through their Node.js environment.
+# However, if you need specific redirects, you can add them here.
+
+# Example: Redirect HTTP to HTTPS (if not handled automatically)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
