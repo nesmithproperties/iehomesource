@@ -3,12 +3,17 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Serve static files from the 'static' directory
-app.use(express.static(path.join(__dirname, 'static')));
+// Configures EJS to read HTML files with Python-like logic
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 
-// Main route to serve the home page
+// Setup static and templates folders
+app.use('/static', express.static(path.join(__dirname, 'static')));
+app.set('views', path.join(__dirname, 'templates'));
+
+// Main route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'templates', 'index.html'));
+    res.render('index.html');
 });
 
 app.listen(port, () => {
