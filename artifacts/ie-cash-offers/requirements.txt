@@ -1,3 +1,0 @@
-flask
-contentful
-python-dotenv
